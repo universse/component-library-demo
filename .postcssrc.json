@@ -1,0 +1,13 @@
+{
+  "plugins": {
+    "postcss-preset-env": {
+      "stage": false,
+      "features": {
+        "custom-selectors": true
+      }
+    },
+    "@tailwindcss/postcss": {
+      "optimize": true
+    }
+  }
+}

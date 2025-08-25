@@ -1,0 +1,9 @@
+@custom-media --vs-condition-touch (any-pointer: coarse);
+@custom-media --vs-condition-forced-colors (forced-colors: active);
+@custom-media --vs-condition-color-scheme-pref-light (prefers-color-scheme: light);
+@custom-media --vs-condition-color-scheme-pref-dark (prefers-color-scheme: dark);
+@custom-media --vs-condition-contrast-pref-less (prefers-contrast: less);
+@custom-media --vs-condition-contrast-pref-more (prefers-contrast: more) and (forced-colors: none);
+@custom-media --vs-condition-contrast-pref-forced (forced-colors: active);
+@custom-media --vs-condition-motion-pref-none (prefers-reduced-motion: no-preference);
+@custom-media --vs-condition-motion-pref-reduced (prefers-reduced-motion: reduce);

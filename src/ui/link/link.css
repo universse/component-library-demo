@@ -1,0 +1,28 @@
+.vsc-link {
+  appearance: none;
+  color: var(--vs-link-color, inherit);
+  cursor: pointer;
+  opacity: var(--vs-link-opacity);
+  outline: var(--vs-link-outline-width) var(--vs-link-outline-style)
+    var(--vs-link-outline-color);
+  outline-offset: var(--vs-link-outline-offset);
+  position: relative;
+  text-decoration: var(--vs-link-decoration-line-thickness, auto)
+    var(--vs-link-decoration-line-style, solid)
+    var(--vs-link-decoration-line-color, currentcolor);
+  text-underline-offset: var(--vs-link-underline-offset, auto);
+
+  &[data-visual='plain'] {
+    text-decoration-line: none;
+  }
+
+  &[data-visual='underline'] {
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+  }
+
+  &[data-visual='dotted'] {
+    text-decoration-line: underline;
+    text-decoration-style: dotted;
+  }
+}

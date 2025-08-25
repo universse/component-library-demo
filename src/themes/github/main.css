@@ -1,0 +1,194 @@
+@layer reset, theme, global, components, app, utilities;
+
+/* CSS theme */
+@import './tokens/css/custom-media.css';
+@import './tokens/css/custom-selectors.css';
+@import './tokens/css/theme.css' layer(theme);
+
+/* TailwindCSS */
+@import 'tailwindcss/preflight.css' layer(reset);
+@import 'tailwindcss/theme.css' layer(theme) prefix(vs);
+@import 'tailwindcss/utilities.css' layer(utilities) prefix(vs);
+@import './tokens/tailwind-v4/theme.css' layer(theme)
+  prefix(vs);
+@import './tokens/tailwind-v4/variants.css';
+
+/* UI */
+@import '#src/ui/core/css/keyframes.css';
+@import '#src/ui/core/css/components.css' layer(components);
+@import '#src/ui/core/css/utilities.css' layer(utilities);
+
+/* Icon */
+@import '#src/ui/core/css/icon/octicons.css' layer(components);
+
+/* Global */
+@layer global {
+  * {
+    border-color: var(--vs-border-color-default);
+  }
+
+  :--vs-container {
+    background-color: var(--vs-background-color-default);
+    color: var(--vs-text-color-default);
+    font-family: var(--vs-font-family-sans-serif);
+    font-size: var(--vs-text-body-size-large);
+    line-height: var(--vs-text-body-line-height-large);
+  }
+
+  :--vs-container:--vs-condition-color-mode-light {
+    color-scheme: light;
+  }
+
+  :--vs-container:--vs-condition-color-mode-dark {
+    color-scheme: dark;
+  }
+
+  :focus-visible {
+    outline: var(--vs-outline-focus-ring-width) solid
+      var(--vs-outline-focus-ring-color);
+    outline-offset: var(--vs-outline-focus-ring-offset);
+  }
+}
+
+@utility typography-display {
+  font-size: var(--vs-text-display-size);
+  font-weight: var(--vs-text-display-weight);
+  line-height: var(--vs-text-display-line-height);
+}
+
+@utility typography-display-shorthand {
+  font-family: var(--vs-text-display-shorthand-font-family);
+  font-size: var(--vs-text-display-shorthand-font-size);
+  font-weight: var(--vs-text-display-shorthand-font-weight);
+  line-height: var(--vs-text-display-shorthand-line-height);
+}
+
+@utility typography-title-small {
+  font-size: var(--vs-text-title-size-small);
+  font-weight: var(--vs-text-title-weight-small);
+  line-height: var(--vs-text-title-line-height-small);
+}
+
+@utility typography-title-medium {
+  font-size: var(--vs-text-title-size-medium);
+  font-weight: var(--vs-text-title-weight-medium);
+  line-height: var(--vs-text-title-line-height-medium);
+}
+
+@utility typography-title-large {
+  font-size: var(--vs-text-title-size-large);
+  font-weight: var(--vs-text-title-weight-large);
+  line-height: var(--vs-text-title-line-height-large);
+}
+
+@utility typography-title-shorthand-small {
+  font-family: var(--vs-text-title-shorthand-small-font-family);
+  font-size: var(--vs-text-title-shorthand-small-font-size);
+  font-weight: var(--vs-text-title-shorthand-small-font-weight);
+  line-height: var(--vs-text-title-shorthand-small-line-height);
+}
+
+@utility typography-title-shorthand-medium {
+  font-family: var(--vs-text-title-shorthand-medium-font-family);
+  font-size: var(--vs-text-title-shorthand-medium-font-size);
+  font-weight: var(--vs-text-title-shorthand-medium-font-weight);
+  line-height: var(--vs-text-title-shorthand-medium-line-height);
+}
+
+@utility typography-title-shorthand-large {
+  font-family: var(--vs-text-title-shorthand-large-font-family);
+  font-size: var(--vs-text-title-shorthand-large-font-size);
+  font-weight: var(--vs-text-title-shorthand-large-font-weight);
+  line-height: var(--vs-text-title-shorthand-large-line-height);
+}
+
+@utility typography-subtitle {
+  font-size: var(--vs-text-subtitle-size);
+  font-weight: var(--vs-text-subtitle-weight);
+  line-height: var(--vs-text-subtitle-line-height);
+}
+
+@utility typography-subtitle-shorthand {
+  font-family: var(--vs-text-subtitle-shorthand-font-family);
+  font-size: var(--vs-text-subtitle-shorthand-font-size);
+  font-weight: var(--vs-text-subtitle-shorthand-font-weight);
+  line-height: var(--vs-text-subtitle-shorthand-line-height);
+}
+
+@utility typography-body-small {
+  font-size: var(--vs-text-body-size-small);
+  font-weight: var(--vs-text-body-weight);
+  line-height: var(--vs-text-body-line-height-small);
+}
+
+@utility typography-body-medium {
+  font-size: var(--vs-text-body-size-medium);
+  font-weight: var(--vs-text-body-weight);
+  line-height: var(--vs-text-body-line-height-medium);
+}
+
+@utility typography-body-large {
+  font-size: var(--vs-text-body-size-large);
+  font-weight: var(--vs-text-body-weight);
+  line-height: var(--vs-text-body-line-height-large);
+}
+
+@utility typography-body-shorthand-small {
+  font-family: var(--vs-text-body-shorthand-small-font-family);
+  font-size: var(--vs-text-body-shorthand-small-font-size);
+  font-weight: var(--vs-text-body-shorthand-small-font-weight);
+  line-height: var(--vs-text-body-shorthand-small-line-height);
+}
+
+@utility typography-body-shorthand-medium {
+  font-family: var(--vs-text-body-shorthand-medium-font-family);
+  font-size: var(--vs-text-body-shorthand-medium-font-size);
+  font-weight: var(--vs-text-body-shorthand-medium-font-weight);
+  line-height: var(--vs-text-body-shorthand-medium-line-height);
+}
+
+@utility typography-body-shorthand-large {
+  font-family: var(--vs-text-body-shorthand-large-font-family);
+  font-size: var(--vs-text-body-shorthand-large-font-size);
+  font-weight: var(--vs-text-body-shorthand-large-font-weight);
+  line-height: var(--vs-text-body-shorthand-large-line-height);
+}
+
+@utility typography-caption {
+  font-size: var(--vs-text-caption-size);
+  font-weight: var(--vs-text-caption-weight);
+  line-height: var(--vs-text-caption-line-height);
+}
+
+@utility typography-caption-shorthand {
+  font-family: var(--vs-text-caption-shorthand-font-family);
+  font-size: var(--vs-text-caption-shorthand-font-size);
+  font-weight: var(--vs-text-caption-shorthand-font-weight);
+  line-height: var(--vs-text-caption-shorthand-line-height);
+}
+
+@utility typography-code-block {
+  font-size: var(--vs-text-code-block-size);
+  font-weight: var(--vs-text-code-block-weight);
+  line-height: var(--vs-text-code-block-line-height);
+}
+
+@utility typography-code-block-shorthand {
+  font-family: var(--vs-text-code-block-shorthand-font-family);
+  font-size: var(--vs-text-code-block-shorthand-font-size);
+  font-weight: var(--vs-text-code-block-shorthand-font-weight);
+  line-height: var(--vs-text-code-block-shorthand-line-height);
+}
+
+@utility typography-code-inline {
+  font-size: var(--vs-text-code-inline-size);
+  font-weight: var(--vs-text-code-inline-weight);
+  line-height: var(--vs-text-code-inline-line-height);
+}
+
+@utility typography-code-inline-shorthand {
+  font-family: var(--vs-text-code-inline-shorthand-font-family);
+  font-size: var(--vs-text-code-inline-shorthand-font-size);
+  font-weight: var(--vs-text-code-inline-shorthand-font-weight);
+  line-height: var(--vs-text-code-inline-shorthand-line-height);
+}

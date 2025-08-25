@@ -1,0 +1,14 @@
+{
+  "extends": "astro/tsconfigs/strictest",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "jsx": "react-jsx",
+    "paths": {
+      "#src/*": ["src/*"],
+      "vs:theme/*": ["src/themes/shadcn/*"]
+    },
+    "types": ["palettez/global"]
+  },
+  "include": [".astro/types.d.ts", "**/*"],
+  "exclude": ["dist", ".wrangler"]
+}

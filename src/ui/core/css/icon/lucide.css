@@ -1,0 +1,15 @@
+.vsc-icon {
+  block-size: var(--ovr-icon-size, var(--vs-icon-size, 1em));
+  color: var(--ovr-icon-color, var(--vs-icon-color, inherit));
+  display: block;
+  fill: none;
+  inline-size: var(--ovr-icon-size, var(--vs-icon-size, 1em));
+  stroke: currentcolor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
+
+  [dir='rtl'] &[data-rtl='true'] {
+    transform: scaleX(-1);
+  }
+}

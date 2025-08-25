@@ -1,0 +1,30 @@
+.vs\:touch-target {
+  &::after {
+    @media (--vs-condition-touch) {
+      block-size: max(var(--vs-size-touch-target-md), 100%);
+      content: '';
+      inline-size: max(var(--vs-size-touch-target-md), 100%);
+      inset-block-start: 50%;
+      inset-inline-start: 50%;
+      position: absolute;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+.vs\:visually-hidden {
+  &:not([data-focusable='true']),
+  &[data-focusable='true']:not(:focus, [data-focused='true']) {
+    block-size: 1px;
+    border: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    inline-size: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    word-wrap: normal;
+  }
+}

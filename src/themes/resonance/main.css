@@ -1,0 +1,184 @@
+@layer reset, theme, global, components, app, utilities;
+
+/* CSS theme */
+@import './tokens/css/custom-media.css';
+@import './tokens/css/custom-selectors.css';
+@import './tokens/css/theme.css' layer(theme);
+
+/* TailwindCSS */
+@import 'tailwindcss/preflight.css' layer(reset);
+@import 'tailwindcss/theme.css' layer(theme) prefix(vs);
+@import 'tailwindcss/utilities.css' layer(utilities) prefix(vs);
+@import './tokens/tailwind-v4/theme.css' layer(theme)
+  prefix(vs);
+@import './tokens/tailwind-v4/variants.css';
+
+/* UI */
+@import '#src/ui/core/css/keyframes.css';
+@import '#src/ui/core/css/components.css' layer(components);
+@import '#src/ui/core/css/utilities.css' layer(utilities);
+
+/* Icon */
+@import '#src/ui/core/css/icon/lucide.css' layer(components);
+
+/* Global */
+@layer global {
+  * {
+    border-color: var(--vs-border-color-neutral-5);
+  }
+
+  :--vs-container {
+    background-color: var(--vs-background-color-neutral-1);
+    color: var(--vs-text-color-neutral-90);
+    font-family: var(--vs-typography-body-md-font-family);
+    font-size: var(--vs-typography-body-md-font-size);
+    line-height: var(--vs-typography-body-md-line-height);
+  }
+
+  :--vs-container:--vs-condition-color-scheme-light {
+    color-scheme: light;
+  }
+
+  :--vs-container:--vs-condition-color-scheme-dark {
+    color-scheme: dark;
+  }
+
+  :root {
+    /* caret color
+    selection
+    scrollbar
+    accent-color */
+  }
+
+  :focus-visible {
+    outline: var(--vs-outline-focus-ring-width) var(--vs-outline-style-solid)
+      var(--vs-outline-focus-ring-color);
+    outline-offset: var(--vs-outline-focus-ring-offset);
+  }
+}
+
+@utility typography-display-md {
+  font-family: var(--vs-typography-display-md-font-family);
+  font-size: var(--vs-typography-display-md-font-size);
+  font-style: var(--vs-typography-display-md-font-style);
+  font-weight: var(--vs-typography-display-md-font-weight);
+  letter-spacing: var(--vs-typography-display-md-letter-spacing);
+  line-height: var(--vs-typography-display-md-line-height);
+}
+
+@utility typography-display-lg {
+  font-family: var(--vs-typography-display-lg-font-family);
+  font-size: var(--vs-typography-display-lg-font-size);
+  font-style: var(--vs-typography-display-lg-font-style);
+  font-weight: var(--vs-typography-display-lg-font-weight);
+  letter-spacing: var(--vs-typography-display-lg-letter-spacing);
+  line-height: var(--vs-typography-display-lg-line-height);
+}
+
+@utility typography-heading-sm {
+  font-family: var(--vs-typography-heading-sm-font-family);
+  font-size: var(--vs-typography-heading-sm-font-size);
+  font-style: var(--vs-typography-heading-sm-font-style);
+  font-weight: var(--vs-typography-heading-sm-font-weight);
+  letter-spacing: var(--vs-typography-heading-sm-letter-spacing);
+  line-height: var(--vs-typography-heading-sm-line-height);
+}
+
+@utility typography-heading-md {
+  font-family: var(--vs-typography-heading-md-font-family);
+  font-size: var(--vs-typography-heading-md-font-size);
+  font-style: var(--vs-typography-heading-md-font-style);
+  font-weight: var(--vs-typography-heading-md-font-weight);
+  letter-spacing: var(--vs-typography-heading-md-letter-spacing);
+  line-height: var(--vs-typography-heading-md-line-height);
+}
+
+@utility typography-heading-lg {
+  font-family: var(--vs-typography-heading-lg-font-family);
+  font-size: var(--vs-typography-heading-lg-font-size);
+  font-style: var(--vs-typography-heading-lg-font-style);
+  font-weight: var(--vs-typography-heading-lg-font-weight);
+  letter-spacing: var(--vs-typography-heading-lg-letter-spacing);
+  line-height: var(--vs-typography-heading-lg-line-height);
+}
+
+@utility typography-title-sm {
+  font-family: var(--vs-typography-title-sm-font-family);
+  font-size: var(--vs-typography-title-sm-font-size);
+  font-style: var(--vs-typography-title-sm-font-style);
+  font-weight: var(--vs-typography-title-sm-font-weight);
+  letter-spacing: var(--vs-typography-title-sm-letter-spacing);
+  line-height: var(--vs-typography-title-sm-line-height);
+}
+
+@utility typography-title-md {
+  font-family: var(--vs-typography-title-md-font-family);
+  font-size: var(--vs-typography-title-md-font-size);
+  font-style: var(--vs-typography-title-md-font-style);
+  font-weight: var(--vs-typography-title-md-font-weight);
+  letter-spacing: var(--vs-typography-title-md-letter-spacing);
+  line-height: var(--vs-typography-title-md-line-height);
+}
+
+@utility typography-title-lg {
+  font-family: var(--vs-typography-title-lg-font-family);
+  font-size: var(--vs-typography-title-lg-font-size);
+  font-style: var(--vs-typography-title-lg-font-style);
+  font-weight: var(--vs-typography-title-lg-font-weight);
+  letter-spacing: var(--vs-typography-title-lg-letter-spacing);
+  line-height: var(--vs-typography-title-lg-line-height);
+}
+
+@utility typography-body-sm {
+  font-family: var(--vs-typography-body-sm-font-family);
+  font-size: var(--vs-typography-body-sm-font-size);
+  font-style: var(--vs-typography-body-sm-font-style);
+  font-weight: var(--vs-typography-body-sm-font-weight);
+  letter-spacing: var(--vs-typography-body-sm-letter-spacing);
+  line-height: var(--vs-typography-body-sm-line-height);
+}
+
+@utility typography-body-md {
+  font-family: var(--vs-typography-body-md-font-family);
+  font-size: var(--vs-typography-body-md-font-size);
+  font-style: var(--vs-typography-body-md-font-style);
+  font-weight: var(--vs-typography-body-md-font-weight);
+  letter-spacing: var(--vs-typography-body-md-letter-spacing);
+  line-height: var(--vs-typography-body-md-line-height);
+}
+
+@utility typography-body-lg {
+  font-family: var(--vs-typography-body-lg-font-family);
+  font-size: var(--vs-typography-body-lg-font-size);
+  font-style: var(--vs-typography-body-lg-font-style);
+  font-weight: var(--vs-typography-body-lg-font-weight);
+  letter-spacing: var(--vs-typography-body-lg-letter-spacing);
+  line-height: var(--vs-typography-body-lg-line-height);
+}
+
+@utility typography-status {
+  font-family: var(--vs-typography-status-font-family);
+  font-size: var(--vs-typography-status-font-size);
+  font-style: var(--vs-typography-status-font-style);
+  font-weight: var(--vs-typography-status-font-weight);
+  letter-spacing: var(--vs-typography-status-letter-spacing);
+  line-height: var(--vs-typography-status-line-height);
+}
+
+@utility typography-button {
+  font-family: var(--vs-typography-button-font-family);
+  font-size: var(--vs-typography-button-font-size);
+  font-style: var(--vs-typography-button-font-style);
+  font-weight: var(--vs-typography-button-font-weight);
+  letter-spacing: var(--vs-typography-button-letter-spacing);
+  line-height: var(--vs-typography-button-line-height);
+}
+
+@utility typography-code {
+  font-family: var(--vs-typography-code-font-family);
+  font-size: var(--vs-typography-code-font-size);
+  font-style: var(--vs-typography-code-font-style);
+  font-weight: var(--vs-typography-code-font-weight);
+  letter-spacing: var(--vs-typography-code-letter-spacing);
+  line-height: var(--vs-typography-code-line-height);
+}

@@ -1,0 +1,14 @@
+@custom-media --vs-condition-touch (any-pointer: coarse);
+@custom-media --vs-condition-forced-colors (forced-colors: active);
+@custom-media --vs-condition-color-mode-pref-light (prefers-color-scheme: light);
+@custom-media --vs-condition-color-mode-pref-dark (prefers-color-scheme: dark);
+@custom-media --vs-condition-motion-pref-none (prefers-reduced-motion: no-preference);
+@custom-media --vs-condition-motion-pref-reduced (prefers-reduced-motion: reduce);
+@custom-media --vs-condition-viewport-range-narrow (max-width: calc(768px - 0.02px));
+@custom-media --vs-condition-viewport-range-narrow-landscape (max-width: calc(1012px - 0.02px) and (max-height: calc(544px - 0.02px)) and (orientation: landscape));
+@custom-media --vs-condition-viewport-range-regular (min-width: 768px);
+@custom-media --vs-condition-viewport-range-wide (min-width: 1400px);
+@custom-media --vs-condition-viewport-range-portrait (orientation: portrait);
+@custom-media --vs-condition-viewport-range-landscape (orientation: landscape);
+@custom-media --vs-condition-pointer-fine (pointer: fine);
+@custom-media --vs-condition-pointer-coarse (pointer: coarse);

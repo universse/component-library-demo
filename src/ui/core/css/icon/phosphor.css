@@ -1,0 +1,11 @@
+.vsc-icon {
+  block-size: var(--ovr-icon-size, var(--vs-icon-size, 1em));
+  color: var(--ovr-icon-color, var(--vs-icon-color, inherit));
+  display: block;
+  fill: currentcolor;
+  inline-size: var(--ovr-icon-size, var(--vs-icon-size, 1em));
+
+  [dir='rtl'] &[data-rtl='true'] {
+    transform: scaleX(-1);
+  }
+}

@@ -1,0 +1,122 @@
+@layer reset, theme, global, components, app, utilities;
+
+/* CSS theme */
+@import './tokens/css/custom-media.css';
+@import './tokens/css/custom-selectors.css';
+@import './tokens/css/theme.css' layer(theme);
+
+/* TailwindCSS */
+@import 'tailwindcss/preflight.css' layer(reset);
+@import 'tailwindcss/theme.css' layer(theme) prefix(vs);
+@import 'tailwindcss/utilities.css' layer(utilities) prefix(vs);
+@import './tokens/tailwind-v4/theme.css' layer(theme)
+  prefix(vs);
+@import './tokens/tailwind-v4/variants.css';
+
+/* UI */
+@import '#src/ui/core/css/keyframes.css';
+@import '#src/ui/core/css/components.css' layer(components);
+@import '#src/ui/core/css/utilities.css' layer(utilities);
+
+/* Icon */
+@import '#src/ui/core/css/icon/tabler.css' layer(components);
+
+/* @import 'tw-animate-css'; */
+
+/* Global */
+@layer global {
+  * {
+    border-color: var(--vs-color-border);
+  }
+
+  :--vs-container {
+    background-color: var(--vs-color-background);
+    color: var(--vs-color-foreground);
+    font-family: var(--vs-font-family-sans);
+    font-size: var(--vs-typography-base-font-size);
+    line-height: var(--vs-typography-base-line-height);
+  }
+
+  :--vs-container:--vs-condition-mode-light {
+    color-scheme: light;
+  }
+
+  :--vs-container:--vs-condition-mode-dark {
+    color-scheme: dark;
+  }
+
+  * {
+    @apply vs:border-border;
+  }
+
+  :focus-visible {
+    outline: var(--vs-outline-focus-ring-width) solid
+      var(--vs-outline-focus-ring-color);
+    outline-offset: var(--vs-outline-focus-ring-offset);
+  }
+}
+
+@utility typography-xs {
+  font-size: var(--vs-typography-xs-font-size);
+  line-height: var(--vs-typography-xs-line-height);
+}
+
+@utility typography-sm {
+  font-size: var(--vs-typography-sm-font-size);
+  line-height: var(--vs-typography-sm-line-height);
+}
+
+@utility typography-base {
+  font-size: var(--vs-typography-base-font-size);
+  line-height: var(--vs-typography-base-line-height);
+}
+
+@utility typography-lg {
+  font-size: var(--vs-typography-lg-font-size);
+  line-height: var(--vs-typography-lg-line-height);
+}
+
+@utility typography-xl {
+  font-size: var(--vs-typography-xl-font-size);
+  line-height: var(--vs-typography-xl-line-height);
+}
+
+@utility typography-2xl {
+  font-size: var(--vs-typography-2xl-font-size);
+  line-height: var(--vs-typography-2xl-line-height);
+}
+
+@utility typography-3xl {
+  font-size: var(--vs-typography-3xl-font-size);
+  line-height: var(--vs-typography-3xl-line-height);
+}
+
+@utility typography-4xl {
+  font-size: var(--vs-typography-4xl-font-size);
+  line-height: var(--vs-typography-4xl-line-height);
+}
+
+@utility typography-5xl {
+  font-size: var(--vs-typography-5xl-font-size);
+  line-height: var(--vs-typography-5xl-line-height);
+}
+
+@utility typography-6xl {
+  font-size: var(--vs-typography-6xl-font-size);
+  line-height: var(--vs-typography-6xl-line-height);
+}
+
+@utility typography-7xl {
+  font-size: var(--vs-typography-7xl-font-size);
+  line-height: var(--vs-typography-7xl-line-height);
+}
+
+@utility typography-8xl {
+  font-size: var(--vs-typography-8xl-font-size);
+  line-height: var(--vs-typography-8xl-line-height);
+}
+
+@utility typography-9xl {
+  font-size: var(--vs-typography-9xl-font-size);
+  line-height: var(--vs-typography-9xl-line-height);
+}
