@@ -312,7 +312,7 @@ function AppearanceControls({ theme }: { theme: DemoTheme }) {
               {key.replace(/([a-z])([A-Z])/g, '$1 $2').toLowerCase()}
             </label>
             <select
-              className='vs:h-[2rem] vs:w-[9rem] vs:rounded-[4px] vs:px-[8px]'
+              className='vs:h-[2rem] vs:w-[9rem] vs:rounded-[4px] vs:px-[8px] vs:border-[1px]'
               name={key}
               onChange={(e) => {
                 setThemes({ [key]: e.target.value })

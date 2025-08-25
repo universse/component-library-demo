@@ -5,7 +5,7 @@
     "jsx": "react-jsx",
     "paths": {
       "#src/*": ["src/*"],
-      "vs:theme/*": ["src/themes/shadcn/*"]
+      "vs:theme/*": ["src/themes/github/*"]
     },
     "types": ["palettez/global"]
   },
