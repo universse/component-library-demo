@@ -1,3 +1,7 @@
+## Demo link
+
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/fork/github/universse/component-library-demo?title=Theme%20Demo&file=src%2Fpages%2Findex.astro)
+
 ## Project structure
 
 ```
