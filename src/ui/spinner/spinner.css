@@ -56,11 +56,16 @@
     stroke-width: var(--vs-spinner-track-border-width);
   }
 
-  &[data-loading='true'] {
-    animation: vsc-fade-in 0ms linear var(--vs-spinner-appearance-delay) both;
+  &[data-loading] {
+    opacity: 1;
+    transition: opacity 0ms linear var(--vs-spinner-appearance-delay);
+
+    @starting-style {
+      opacity: 0;
+    }
   }
 
-  &[data-loading='true'] .vsc-spinner-fill {
+  &[data-loading] .vsc-spinner-fill {
     --data-percentage: var(--vs-spinner-fill-indeterminate-percentage);
 
     animation: vsc-spin var(--vs-spinner-spin-duration)

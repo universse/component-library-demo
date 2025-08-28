@@ -7,7 +7,7 @@
   stroke: currentcolor;
   stroke-width: 1.5;
 
-  [dir='rtl'] &[data-rtl='true'] {
+  [dir='rtl'] &[data-rtl] {
     transform: scaleX(-1);
   }
 }

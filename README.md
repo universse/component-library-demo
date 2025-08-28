@@ -1,6 +1,6 @@
 ## Demo link
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/fork/github/universse/component-library-demo?title=Theme%20Demo&file=src%2Fpages%2Findex.astro,src%2Flib%2Fcomponents.tsx)
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/fork/github/universse/component-library-demo?title=Theme%20Demo&file=src%2Fpages%2Findex.astro,src%2Flib%2Fcomponents.tsx,README.md)
 
 ## Project structure
 
@@ -20,6 +20,13 @@
 │       ├── button/
 │       ├── icon/
 │       └── ...
+```
+
+# Running locally
+
+```bash
+npm install
+npm run dev
 ```
 
 ## Switching theme

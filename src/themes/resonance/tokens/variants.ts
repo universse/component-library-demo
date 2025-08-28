@@ -566,7 +566,7 @@ export const toastVariantMap = {
 } as const satisfies { [key in keyof ToastVariants]: [string, ToastVariants[key]] | [string] }
 
 export interface ToggleButtonVariants {
-  tone?: 'accent' | 'neutral' | 'static-black' | 'static-white' | undefined
+  tone?: 'accent' | 'neutral' | undefined
   visual?: 'bold' | 'soft' | 'plain' | undefined
   withOutline?: boolean | undefined
   size?: '2xs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | undefined
@@ -578,7 +578,7 @@ export const toggleButtonVariantMap = {
 } as const satisfies { [key in keyof ToggleButtonVariants]: [string, ToggleButtonVariants[key]] | [string] }
 
 export interface ToggleButtonGroupVariants {
-  tone?: 'accent' | 'neutral' | 'static-black' | 'static-white' | undefined
+  tone?: 'accent' | 'neutral' | undefined
   visual?: 'bold' | 'soft' | 'plain' | undefined
   withOutline?: boolean | undefined
   radius?: 'sm' | 'full' | undefined

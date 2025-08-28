@@ -43,7 +43,7 @@
     color-scheme: dark;
   }
 
-  :focus-visible {
+  :focus-visible:not([data-focused]) {
     outline: var(--vs-outline-focus-ring-width) solid
       var(--vs-outline-focus-ring-color);
     outline-offset: var(--vs-outline-focus-ring-offset);

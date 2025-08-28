@@ -346,7 +346,7 @@
   --shadow-inset-2xs: 0px 1px 0px 0px #0000000d;
   --shadow-inset-xs: 0px 1px 1px 0px #0000000d;
   --shadow-inset-sm: 0px 2px 4px 0px #0000000d;
-  --shadow-ring: 0px 0px 0px 3px #000000;
+  --shadow-ring: 0px 0px 0px 3px color-mix(in oklab, var(--vs-color-ring) 50%, color-mix(in oklab, var(--vs-color-ring) 50%, var(--vs-color-transparent)));
   --shadow-ring-destructive: var(--vs-box-shadow-ring-destructive);
   --spacing-0: 0px;
   --spacing-1: 0.25rem;

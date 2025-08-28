@@ -337,8 +337,8 @@
   --vs-box-shadow-inset-2xs: 0px 1px 0px 0px #0000000d;
   --vs-box-shadow-inset-xs: 0px 1px 1px 0px #0000000d;
   --vs-box-shadow-inset-sm: 0px 2px 4px 0px #0000000d;
-  --vs-box-shadow-ring: 0px 0px 0px 3px #000000;
-  --vs-box-shadow-ring-destructive: 0px 0px 0px 3px #000000;
+  --vs-box-shadow-ring: 0px 0px 0px 3px color-mix(in oklab, var(--vs-color-ring) 50%, color-mix(in oklab, var(--vs-color-ring) 50%, var(--vs-color-transparent)));
+  --vs-box-shadow-ring-destructive: 0px 0px 0px 3px color-mix(in oklab, var(--vs-color-destructive) 20%, color-mix(in oklab, var(--vs-color-destructive) 20%, var(--vs-color-transparent)));
   --vs-space-0: 0px;
   --vs-space-1: 0.25rem;
   --vs-space-2: calc(var(--vs-space-1) * 2);
@@ -417,7 +417,7 @@
   --vs-color-sidebar-accent: oklch(0.269 0 0);
   --vs-color-sidebar-accent-foreground: oklch(0.985 0 0);
   --vs-color-sidebar-border: oklch(1 0 0 / 0.1);
-  --vs-box-shadow-ring-destructive: 0px 0px 0px 3px #000000;
+  --vs-box-shadow-ring-destructive: 0px 0px 0px 3px color-mix(in oklab, var(--vs-color-destructive) 40%, color-mix(in oklab, var(--vs-color-destructive) 40%, var(--vs-color-transparent)));
 }
 
 :root[data-theme="mono"] {
@@ -650,12 +650,12 @@
   --vs-button-border-style: solid;
   --vs-button-border-color: var(--vs-color-transparent);
   --vs-button-radius: var(--vs-border-radius-md);
+  --vs-button-box-shadow: var(--vs-box-shadow-xs);
 }
 
 .vsc-button[data-variant="default"] {
   --vs-button-text-color: var(--vs-color-primary-foreground);
   --vs-button-background-color: var(--vs-color-primary);
-  --vs-button-box-shadow: var(--vs-box-shadow-xs);
 }
 
 .vsc-button[data-variant="destructive"] {
@@ -667,19 +667,22 @@
 .vsc-button[data-variant="secondary"] {
   --vs-button-text-color: var(--vs-color-secondary-foreground);
   --vs-button-background-color: var(--vs-color-secondary);
-  --vs-button-box-shadow: var(--vs-box-shadow-xs);
+}
+
+.vsc-button[data-status="soft-disabled"] {
+  --vs-button-text-color: var(--vs-color-foreground);
+  --vs-button-background-color: var(--vs-color-secondary);
 }
 
 .vsc-button[data-variant="outline"] {
   --vs-button-background-color: var(--vs-color-background);
-  --vs-button-box-shadow: var(--vs-box-shadow-xs);
 }
 
 .vsc-button[data-variant="ghost"] {
   --vs-button-background-color: var(--vs-color-transparent);
 }
 
-.vsc-button:is(:disabled, [disabled], [data-disabled="true"]) {
+.vsc-button:is(:disabled, [data-disabled], [data-status="disabled"]) {
   --vs-button-opacity: var(--vs-opacity-50);
 }
 
@@ -704,6 +707,10 @@
   --vs-button-padding-right: var(--vs-space-6);
 }
 
+:root[data-mode="dark"] .vsc-button[data-variant="destructive"] {
+  --vs-button-background-color: color-mix(in oklab, var(--vs-color-destructive) 60%, var(--vs-color-transparent));
+}
+
 :root[data-mode="dark"] .vsc-button[data-variant="outline"] {
   --vs-button-background-color: color-mix(in oklab, var(--vs-color-input) 30%, var(--vs-color-transparent));
   --vs-button-border-color: var(--vs-color-input);
@@ -724,61 +731,49 @@
   --vs-button-padding-right: var(--vs-space-4);
 }
 
-.vsc-button:is(:focus-visible:not([data-focused="true"]), [data-focus-visible="true"]) {
-  --vs-button-border-color: var(--vs-color-ring);
-  --vs-button-outline-color: var(--vs-outline-focus-ring-color);
-  --vs-button-outline-width: var(--vs-outline-focus-ring-width);
-  --vs-button-outline-style: solid;
-  --vs-button-outline-offset: var(--vs-outline-focus-ring-offset);
-}
-
-.vsc-button:is(:focus-visible:not([data-focused="true"]), [data-focus-visible="true"])[data-variant="default"] {
+.vsc-button:is(:focus-visible:not([data-focused]), [data-focus-visible]) {
   --vs-button-box-shadow: var(--vs-box-shadow-xs), var(--vs-box-shadow-ring);
 }
 
-.vsc-button:is(:focus-visible:not([data-focused="true"]), [data-focus-visible="true"])[data-variant="destructive"] {
-  --vs-button-box-shadow: var(--vs-box-shadow-xs), var(--vs-box-shadow-ring-destructive);
-}
-
-.vsc-button:is(:focus-visible:not([data-focused="true"]), [data-focus-visible="true"])[data-variant="outline"] {
-  --vs-button-box-shadow: var(--vs-box-shadow-xs), var(--vs-box-shadow-ring);
-}
-
-.vsc-button:is(:focus-visible:not([data-focused="true"]), [data-focus-visible="true"])[data-variant="secondary"] {
-  --vs-button-box-shadow: var(--vs-box-shadow-xs), var(--vs-box-shadow-ring);
-}
-
-.vsc-button:is(:hover, [data-hovered="true"]):not(:disabled, [disabled], [data-disabled="true"]):not([data-pending="true"])[data-variant="outline"] {
+.vsc-button:is(:hover, [data-hovered]):not(:disabled, [data-disabled], [aria-disabled])[data-variant="outline"] {
   --vs-button-text-color: var(--vs-color-accent-foreground);
   --vs-button-background-color: var(--vs-color-accent);
 }
 
-.vsc-button:is(:hover, [data-hovered="true"]):not(:disabled, [disabled], [data-disabled="true"]):not([data-pending="true"])[data-variant="ghost"] {
+.vsc-button:is(:hover, [data-hovered]):not(:disabled, [data-disabled], [aria-disabled])[data-variant="ghost"] {
   --vs-button-text-color: var(--vs-color-accent-foreground);
   --vs-button-background-color: var(--vs-color-accent);
 }
 
-.vsc-button:is(:hover, [data-hovered="true"]):not(:disabled, [disabled], [data-disabled="true"]):not([data-pending="true"])[data-variant="default"] {
+.vsc-button:is(:hover, [data-hovered]):not(:disabled, [data-disabled], [aria-disabled])[data-variant="default"] {
   --vs-button-background-color: color-mix(in oklab, var(--vs-color-primary) 90%, var(--vs-color-transparent));
 }
 
-.vsc-button:is(:hover, [data-hovered="true"]):not(:disabled, [disabled], [data-disabled="true"]):not([data-pending="true"])[data-variant="destructive"] {
+.vsc-button:is(:hover, [data-hovered]):not(:disabled, [data-disabled], [aria-disabled])[data-variant="destructive"] {
   --vs-button-background-color: color-mix(in oklab, var(--vs-color-destructive) 90%, var(--vs-color-transparent));
 }
 
-.vsc-button:is(:hover, [data-hovered="true"]):not(:disabled, [disabled], [data-disabled="true"]):not([data-pending="true"])[data-variant="secondary"] {
+.vsc-button:is(:hover, [data-hovered]):not(:disabled, [data-disabled], [aria-disabled])[data-variant="secondary"] {
   --vs-button-background-color: color-mix(in oklab, var(--vs-color-secondary) 80%, var(--vs-color-transparent));
 }
 
-:root[data-mode="dark"] .vsc-button:is(:hover, [data-hovered="true"]):not(:disabled, [disabled], [data-disabled="true"]):not([data-pending="true"])[data-variant="destructive"] {
+.vsc-button:is(:focus-visible:not([data-focused]), [data-focus-visible])[data-variant="outline"] {
+  --vs-button-border-color: var(--vs-color-ring);
+}
+
+.vsc-button:is(:focus-visible:not([data-focused]), [data-focus-visible])[data-variant="destructive"] {
+  --vs-button-box-shadow: var(--vs-box-shadow-xs), var(--vs-box-shadow-ring-destructive);
+}
+
+:root[data-mode="dark"] .vsc-button:is(:hover, [data-hovered]):not(:disabled, [data-disabled], [aria-disabled])[data-variant="destructive"] {
   --vs-button-background-color: color-mix(in oklab, var(--vs-color-destructive) 60%, var(--vs-color-transparent));
 }
 
-:root[data-mode="dark"] .vsc-button:is(:hover, [data-hovered="true"]):not(:disabled, [disabled], [data-disabled="true"]):not([data-pending="true"])[data-variant="outline"] {
+:root[data-mode="dark"] .vsc-button:is(:hover, [data-hovered]):not(:disabled, [data-disabled], [aria-disabled])[data-variant="outline"] {
   --vs-button-background-color: color-mix(in oklab, var(--vs-color-input) 50%, var(--vs-color-transparent));
 }
 
-:root[data-mode="dark"] .vsc-button:is(:hover, [data-hovered="true"]):not(:disabled, [disabled], [data-disabled="true"]):not([data-pending="true"])[data-variant="ghost"] {
+:root[data-mode="dark"] .vsc-button:is(:hover, [data-hovered]):not(:disabled, [data-disabled], [aria-disabled])[data-variant="ghost"] {
   --vs-button-background-color: color-mix(in oklab, var(--vs-color-accent) 50%, var(--vs-color-transparent));
 }
 
@@ -798,11 +793,11 @@
   --vs-link-color: var(--vs-color-primary);
 }
 
-.vsc-link:is(:disabled, [disabled], [data-disabled="true"]) {
+.vsc-link:is(:disabled, [data-disabled], [data-status="disabled"]) {
   --vs-link-opacity: var(--vs-opacity-50);
 }
 
-.vsc-link:is(:focus-visible:not([data-focused="true"]), [data-focus-visible="true"]) {
+.vsc-link:is(:focus-visible:not([data-focused]), [data-focus-visible]) {
   --vs-link-outline-color: var(--vs-outline-focus-ring-color);
   --vs-link-outline-width: var(--vs-outline-focus-ring-width);
   --vs-link-outline-style: solid;
@@ -833,6 +828,6 @@
   --vs-spinner-size: 96px;
 }
 
-.vsc-spinner[data-delayed="true"] {
+.vsc-spinner[data-delayed] {
   --vs-spinner-appearance-delay: 200ms;
 }

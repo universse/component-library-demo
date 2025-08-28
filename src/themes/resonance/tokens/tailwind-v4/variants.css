@@ -30,17 +30,17 @@
 @custom-variant above-2xl (@media (width > 90rem));
 @custom-variant hover {
   @media (hover: hover) {
-    &:is(:hover, [data-hovered="true"]) {
+    &:is(:hover, [data-hovered]) {
       @slot;
     }
   }
 }
-@custom-variant pressed (&:is(:active, [data-pressed="true"]));
-@custom-variant focus (&:is(:focus, [data-focused="true"]));
+@custom-variant pressed (&:is(:active, [data-pressed]));
+@custom-variant focus (&:is(:focus, [data-focused]));
 @custom-variant focus-within (&:focus-within);
-@custom-variant focus-visible (&:is(:focus-visible:not([data-focused="true"]), [data-focus-visible="true"]));
-@custom-variant enabled (&:not(:disabled, [disabled], [data-disabled="true"]));
-@custom-variant disabled (&:is(:disabled, [disabled], [data-disabled="true"]));
+@custom-variant focus-visible (&:is(:focus-visible:not([data-focused]), [data-focus-visible]));
+@custom-variant enabled (&:not(:disabled, [data-disabled], [aria-disabled]));
+@custom-variant disabled (&:is(:disabled, [data-disabled], [data-status="disabled"]));
 @custom-variant input-valid (&:user-valid);
-@custom-variant input-invalid (&:is(:user-invalid, [data-invalid="true"], [aria-invalid="true"]));
+@custom-variant input-invalid (&:is(:user-invalid, [data-invalid], [aria-invalid]));
             

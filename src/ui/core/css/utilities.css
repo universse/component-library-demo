@@ -13,18 +13,18 @@
 }
 
 .vs\:visually-hidden {
-  &:not([data-focusable='true']),
-  &[data-focusable='true']:not(:focus, [data-focused='true']) {
+  &:not([data-focusable]),
+  &[data-focusable]:not(:focus, [data-focused]) {
     block-size: 1px;
     border: 0;
-    clip: rect(0 0 0 0);
+    clip-path: rect(0 0 0 0);
     clip-path: inset(50%);
     inline-size: 1px;
     margin: -1px;
     overflow: hidden;
+    overflow-wrap: normal;
     padding: 0;
     position: absolute;
     white-space: nowrap;
-    word-wrap: normal;
   }
 }

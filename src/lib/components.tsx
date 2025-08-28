@@ -54,7 +54,7 @@ export function Demo({ theme }: { theme: DemoTheme }) {
               <Button
                 iconAfter={<Octicon name='arrow-right-16' rtl />}
                 size='medium' // 'small' | 'medium' | 'large'
-                variant='inactive'
+                isSoftDisabled
               >
                 Click me
               </Button>

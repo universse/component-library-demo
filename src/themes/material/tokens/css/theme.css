@@ -578,32 +578,37 @@
   --vs-button-text-color: var(--vs-color-primary);
 }
 
+.vsc-button[data-status="soft-disabled"] {
+  --vs-button-text-color: var(--vs-color-surface-container-highest);
+  --vs-button-background-color: var(--vs-color-on-surface-variant);
+}
+
 .vsc-button[data-shape="round"] {
   --vs-button-radius: calc(var(--vs-button-height) / 2);
 }
 
-.vsc-button:is(:disabled, [disabled], [data-disabled="true"])[data-color="elevated"] {
+.vsc-button:is(:disabled, [data-disabled], [data-status="disabled"])[data-color="elevated"] {
   --vs-button-text-color: rgb(from var(--vs-color-on-surface) r g b / 0.38);
   --vs-button-background-color: rgb(from var(--vs-color-on-surface) r g b / 0.1);
 }
 
-.vsc-button:is(:disabled, [disabled], [data-disabled="true"])[data-color="filled"] {
+.vsc-button:is(:disabled, [data-disabled], [data-status="disabled"])[data-color="filled"] {
   --vs-button-text-color: rgb(from var(--vs-color-on-surface) r g b / 0.38);
   --vs-button-background-color: rgb(from var(--vs-color-on-surface) r g b / 0.1);
 }
 
-.vsc-button:is(:disabled, [disabled], [data-disabled="true"])[data-color="tonal"] {
+.vsc-button:is(:disabled, [data-disabled], [data-status="disabled"])[data-color="tonal"] {
   --vs-button-text-color: rgb(from var(--vs-color-on-surface) r g b / 0.38);
   --vs-button-background-color: rgb(from var(--vs-color-on-surface) r g b / 0.1);
 }
 
-.vsc-button:is(:disabled, [disabled], [data-disabled="true"])[data-color="outlined"] {
+.vsc-button:is(:disabled, [data-disabled], [data-status="disabled"])[data-color="outlined"] {
   --vs-button-text-color: rgb(from var(--vs-color-on-surface) r g b / 0.38);
   --vs-button-background-color: rgb(from var(--vs-color-on-surface) r g b / 0.1);
   --vs-button-border-color: rgb(from var(--vs-color-outline-variant) r g b / 0.1);
 }
 
-.vsc-button:is(:disabled, [disabled], [data-disabled="true"])[data-color="text"] {
+.vsc-button:is(:disabled, [data-disabled], [data-status="disabled"])[data-color="text"] {
   --vs-button-text-color: rgb(from var(--vs-color-on-surface) r g b / 0.38);
   --vs-button-background-color: rgb(from var(--vs-color-on-surface) r g b / 0.1);
 }
@@ -628,86 +633,86 @@
   --vs-button-radius: var(--vs-border-radius-corner-extra-large);
 }
 
-.vsc-button:is(:focus-visible:not([data-focused="true"]), [data-focus-visible="true"]) {
+.vsc-button:is(:focus-visible:not([data-focused]), [data-focus-visible]) {
   --vs-button-outline-color: var(--vs-outline-focus-ring-color);
   --vs-button-outline-width: var(--vs-outline-focus-ring-width);
   --vs-button-outline-style: solid;
   --vs-button-outline-offset: var(--vs-outline-focus-ring-offset);
 }
 
-.vsc-button:is(:hover, [data-hovered="true"]):not(:disabled, [disabled], [data-disabled="true"]):not([data-pending="true"])[data-color="elevated"] {
+.vsc-button:is(:hover, [data-hovered]):not(:disabled, [data-disabled], [aria-disabled])[data-color="elevated"] {
   --vs-button-text-color: var(--vs-color-primary);
   --vs-button-background-color: color-mix(in srgb, var(--vs-color-primary) 8%, var(--vs-color-surface-container-low) 92%);
   --vs-button-box-shadow: var(--vs-box-shadow-elevation-2);
 }
 
-.vsc-button:is(:active, [data-pressed="true"]):not(:disabled, [disabled], [data-disabled="true"]):not([data-pending="true"])[data-color="elevated"] {
+.vsc-button:is(:active, [data-pressed]):not(:disabled, [data-disabled], [aria-disabled])[data-color="elevated"] {
   --vs-button-text-color: var(--vs-color-primary);
   --vs-button-background-color: color-mix(in srgb, var(--vs-color-primary) 10%, var(--vs-color-surface-container-low) 90%);
   --vs-button-box-shadow: var(--vs-box-shadow-elevation-1);
 }
 
-.vsc-button:is(:hover, [data-hovered="true"]):not(:disabled, [disabled], [data-disabled="true"]):not([data-pending="true"])[data-color="filled"] {
+.vsc-button:is(:hover, [data-hovered]):not(:disabled, [data-disabled], [aria-disabled])[data-color="filled"] {
   --vs-button-text-color: var(--vs-color-on-primary);
   --vs-button-background-color: color-mix(in srgb, var(--vs-color-on-primary) 8%, var(--vs-color-primary) 92%);
   --vs-button-box-shadow: var(--vs-box-shadow-elevation-1);
 }
 
-.vsc-button:is(:active, [data-pressed="true"]):not(:disabled, [disabled], [data-disabled="true"]):not([data-pending="true"])[data-color="filled"] {
+.vsc-button:is(:active, [data-pressed]):not(:disabled, [data-disabled], [aria-disabled])[data-color="filled"] {
   --vs-button-text-color: var(--vs-color-on-primary);
   --vs-button-background-color: color-mix(in srgb, var(--vs-color-on-primary) 10%, var(--vs-color-primary) 90%);
   --vs-button-box-shadow: var(--vs-box-shadow-elevation-0);
 }
 
-.vsc-button:is(:hover, [data-hovered="true"]):not(:disabled, [disabled], [data-disabled="true"]):not([data-pending="true"])[data-color="tonal"] {
+.vsc-button:is(:hover, [data-hovered]):not(:disabled, [data-disabled], [aria-disabled])[data-color="tonal"] {
   --vs-button-text-color: var(--vs-color-on-secondary-container);
   --vs-button-background-color: color-mix(in srgb, var(--vs-color-on-secondary-container) 8%, var(--vs-color-secondary-container) 92%);
   --vs-button-box-shadow: var(--vs-box-shadow-elevation-1);
 }
 
-.vsc-button:is(:active, [data-pressed="true"]):not(:disabled, [disabled], [data-disabled="true"]):not([data-pending="true"])[data-color="tonal"] {
+.vsc-button:is(:active, [data-pressed]):not(:disabled, [data-disabled], [aria-disabled])[data-color="tonal"] {
   --vs-button-text-color: var(--vs-color-on-secondary-container);
   --vs-button-background-color: color-mix(in srgb, var(--vs-color-on-secondary-container) 10%, var(--vs-color-secondary-container) 90%);
   --vs-button-box-shadow: var(--vs-box-shadow-elevation-0);
 }
 
-.vsc-button:is(:hover, [data-hovered="true"]):not(:disabled, [disabled], [data-disabled="true"]):not([data-pending="true"])[data-color="outlined"] {
+.vsc-button:is(:hover, [data-hovered]):not(:disabled, [data-disabled], [aria-disabled])[data-color="outlined"] {
   --vs-button-text-color: var(--vs-color-on-surface-variant);
   --vs-button-border-color: color-mix(in srgb, var(--vs-color-on-surface-variant) 8%, var(--vs-color-outline-variant) 92%);
 }
 
-.vsc-button:is(:active, [data-pressed="true"]):not(:disabled, [disabled], [data-disabled="true"]):not([data-pending="true"])[data-color="outlined"] {
+.vsc-button:is(:active, [data-pressed]):not(:disabled, [data-disabled], [aria-disabled])[data-color="outlined"] {
   --vs-button-text-color: var(--vs-color-on-surface-variant);
   --vs-button-border-color: color-mix(in srgb, var(--vs-color-on-surface-variant) 10%, var(--vs-color-outline-variant) 90%);
 }
 
-.vsc-button:is(:hover, [data-hovered="true"]):not(:disabled, [disabled], [data-disabled="true"]):not([data-pending="true"])[data-color="text"] {
+.vsc-button:is(:hover, [data-hovered]):not(:disabled, [data-disabled], [aria-disabled])[data-color="text"] {
   --vs-button-text-color: var(--vs-color-primary);
   --vs-button-background-color: rgb(from var(--vs-color-primary) r g b / 0.08);
 }
 
-.vsc-button:is(:active, [data-pressed="true"]):not(:disabled, [disabled], [data-disabled="true"]):not([data-pending="true"])[data-color="text"] {
+.vsc-button:is(:active, [data-pressed]):not(:disabled, [data-disabled], [aria-disabled])[data-color="text"] {
   --vs-button-text-color: var(--vs-color-primary);
   --vs-button-background-color: rgb(from var(--vs-color-primary) r g b / 0.1);
 }
 
-.vsc-button:is(:active, [data-pressed="true"]):not(:disabled, [disabled], [data-disabled="true"]):not([data-pending="true"])[data-size="xsmall"] {
+.vsc-button:is(:active, [data-pressed]):not(:disabled, [data-disabled], [aria-disabled])[data-size="xsmall"] {
   --vs-button-radius: var(--vs-border-radius-corner-small);
 }
 
-.vsc-button:is(:active, [data-pressed="true"]):not(:disabled, [disabled], [data-disabled="true"]):not([data-pending="true"])[data-size="small"] {
+.vsc-button:is(:active, [data-pressed]):not(:disabled, [data-disabled], [aria-disabled])[data-size="small"] {
   --vs-button-radius: var(--vs-border-radius-corner-small);
 }
 
-.vsc-button:is(:active, [data-pressed="true"]):not(:disabled, [disabled], [data-disabled="true"]):not([data-pending="true"])[data-size="medium"] {
+.vsc-button:is(:active, [data-pressed]):not(:disabled, [data-disabled], [aria-disabled])[data-size="medium"] {
   --vs-button-radius: var(--vs-border-radius-corner-medium);
 }
 
-.vsc-button:is(:active, [data-pressed="true"]):not(:disabled, [disabled], [data-disabled="true"]):not([data-pending="true"])[data-size="large"] {
+.vsc-button:is(:active, [data-pressed]):not(:disabled, [data-disabled], [aria-disabled])[data-size="large"] {
   --vs-button-radius: var(--vs-border-radius-corner-large);
 }
 
-.vsc-button:is(:active, [data-pressed="true"]):not(:disabled, [disabled], [data-disabled="true"]):not([data-pending="true"])[data-size="xlarge"] {
+.vsc-button:is(:active, [data-pressed]):not(:disabled, [data-disabled], [aria-disabled])[data-size="xlarge"] {
   --vs-button-radius: var(--vs-border-radius-corner-large);
 }
 
@@ -723,11 +728,11 @@
   --vs-link-color: var(--vs-color-tertiary);
 }
 
-.vsc-link:is(:disabled, [disabled], [data-disabled="true"]) {
+.vsc-link:is(:disabled, [data-disabled], [data-status="disabled"]) {
   --vs-link-opacity: 50;
 }
 
-.vsc-link:is(:focus-visible:not([data-focused="true"]), [data-focus-visible="true"]) {
+.vsc-link:is(:focus-visible:not([data-focused]), [data-focus-visible]) {
   --vs-link-outline-color: var(--vs-outline-focus-ring-color);
   --vs-link-outline-width: var(--vs-outline-focus-ring-width);
   --vs-link-outline-style: solid;
@@ -747,6 +752,6 @@
   --vs-spinner-spin-timing-function: var(--vs-timing-function-easing-linear);
 }
 
-.vsc-spinner[data-delayed="true"] {
+.vsc-spinner[data-delayed] {
   --vs-spinner-appearance-delay: 200ms;
 }

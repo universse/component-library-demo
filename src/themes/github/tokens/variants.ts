@@ -15,7 +15,7 @@ export const badgeVariantMap = {
 } as const satisfies { [key in keyof BadgeVariants]: [string, BadgeVariants[key]] | [string] }
 
 export interface ButtonVariants {
-  variant?: 'default' | 'primary' | 'invisible' | 'danger' | 'inactive' | undefined
+  variant?: 'default' | 'primary' | 'invisible' | 'danger' | undefined
   size?: 'small' | 'medium' | 'large' | undefined
 }
 

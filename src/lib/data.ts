@@ -43,11 +43,11 @@ async function defaultThemeScript({
   })
 
   const handleResolvedThemes = (resolvedThemes: Record<string, string>) => {
-    Object.entries(resolvedThemes).forEach(([theme, optionKey]) => {
+    Object.entries(resolvedThemes).forEach(([theme, option]) => {
       if (theme === 'direction') {
-        document.documentElement.dir = optionKey
+        document.documentElement.dir = option
       } else {
-        document.documentElement.dataset[theme] = optionKey
+        document.documentElement.dataset[theme] = option
       }
     })
   }
@@ -103,11 +103,11 @@ export const THEMES: Record<
       })
 
       const handleResolvedThemes = (resolvedThemes: Record<string, string>) => {
-        Object.entries(resolvedThemes).forEach(([theme, optionKey]) => {
-          document.documentElement.dataset[theme] = optionKey
+        Object.entries(resolvedThemes).forEach(([theme, option]) => {
+          document.documentElement.dataset[theme] = option
 
           if (theme === 'colorTheme') {
-            switch (optionKey) {
+            switch (option) {
               case 'light-default':
               case 'light-colorblind':
               case 'light-tritanopia': {
@@ -125,9 +125,9 @@ export const THEMES: Record<
           }
 
           if (theme === 'direction') {
-            document.documentElement.dir = optionKey
+            document.documentElement.dir = option
           } else {
-            document.documentElement.dataset[theme] = optionKey
+            document.documentElement.dataset[theme] = option
           }
         })
       }

@@ -5,7 +5,7 @@
 }
 
 @media (forced-colors: active) {
-  .vsc-button:is(:disabled, [disabled], [data-disabled="true"]) {
+  .vsc-button:is(:disabled, [data-disabled], [data-status="disabled"]) {
     --vs-button-opacity: var(--vs-opacity-disabled-high-contrast);
   }
 
@@ -99,271 +99,271 @@
     --vs-button-border-color: ButtonBorder;
   }
 
-  .vsc-button:is(:disabled, [disabled], [data-disabled="true"])[data-tone="accent"][data-visual="bold"] {
+  .vsc-button:is(:disabled, [data-disabled], [data-status="disabled"])[data-tone="accent"][data-visual="bold"] {
     --vs-button-text-color: var(--vs-text-color-high-contrast-button-primary);
     --vs-button-background-color: var(--vs-background-color-high-contrast-muted);
     --vs-button-border-color: var(--vs-border-color-high-contrast-muted);
   }
 
-  .vsc-button:is(:disabled, [disabled], [data-disabled="true"])[data-tone="accent"][data-visual="outline"] {
+  .vsc-button:is(:disabled, [data-disabled], [data-status="disabled"])[data-tone="accent"][data-visual="outline"] {
     --vs-button-text-color: var(--vs-text-color-high-contrast-muted);
     --vs-button-background-color: var(--vs-background-color-high-contrast-button);
     --vs-button-border-color: var(--vs-border-color-high-contrast-button);
   }
 
-  .vsc-button:is(:disabled, [disabled], [data-disabled="true"])[data-tone="accent"][data-visual="plain"] {
+  .vsc-button:is(:disabled, [data-disabled], [data-status="disabled"])[data-tone="accent"][data-visual="plain"] {
     --vs-button-text-color: var(--vs-text-color-high-contrast-muted);
     --vs-button-background-color: var(--vs-background-color-high-contrast-button);
     --vs-button-border-color: var(--vs-border-color-high-contrast-button);
   }
 
-  .vsc-button:is(:disabled, [disabled], [data-disabled="true"])[data-tone="critical"][data-visual="bold"] {
+  .vsc-button:is(:disabled, [data-disabled], [data-status="disabled"])[data-tone="critical"][data-visual="bold"] {
     --vs-button-text-color: var(--vs-text-color-high-contrast-muted);
     --vs-button-background-color: var(--vs-background-color-high-contrast-button);
     --vs-button-border-color: var(--vs-border-color-high-contrast-button);
   }
 
-  .vsc-button:is(:disabled, [disabled], [data-disabled="true"])[data-tone="critical"][data-visual="outline"] {
+  .vsc-button:is(:disabled, [data-disabled], [data-status="disabled"])[data-tone="critical"][data-visual="outline"] {
     --vs-button-text-color: var(--vs-text-color-high-contrast-muted);
     --vs-button-background-color: var(--vs-background-color-high-contrast-button);
     --vs-button-border-color: var(--vs-border-color-high-contrast-button);
   }
 
-  .vsc-button:is(:disabled, [disabled], [data-disabled="true"])[data-tone="critical"][data-visual="plain"] {
+  .vsc-button:is(:disabled, [data-disabled], [data-status="disabled"])[data-tone="critical"][data-visual="plain"] {
     --vs-button-text-color: var(--vs-text-color-high-contrast-muted);
     --vs-button-background-color: var(--vs-background-color-high-contrast-button);
     --vs-button-border-color: var(--vs-border-color-high-contrast-button);
   }
 
-  .vsc-button:is(:disabled, [disabled], [data-disabled="true"])[data-tone="neutral"][data-visual="bold"] {
+  .vsc-button:is(:disabled, [data-disabled], [data-status="disabled"])[data-tone="neutral"][data-visual="bold"] {
     --vs-button-text-color: var(--vs-text-color-high-contrast-muted);
     --vs-button-background-color: var(--vs-background-color-high-contrast-button);
     --vs-button-border-color: var(--vs-border-color-high-contrast-button);
   }
 
-  .vsc-button:is(:disabled, [disabled], [data-disabled="true"])[data-tone="neutral"][data-visual="outline"] {
+  .vsc-button:is(:disabled, [data-disabled], [data-status="disabled"])[data-tone="neutral"][data-visual="outline"] {
     --vs-button-text-color: var(--vs-text-color-high-contrast-muted);
     --vs-button-background-color: var(--vs-background-color-high-contrast-button);
     --vs-button-border-color: var(--vs-border-color-high-contrast-button);
   }
 
-  .vsc-button:is(:disabled, [disabled], [data-disabled="true"])[data-tone="neutral"][data-visual="plain"] {
+  .vsc-button:is(:disabled, [data-disabled], [data-status="disabled"])[data-tone="neutral"][data-visual="plain"] {
     --vs-button-text-color: var(--vs-text-color-high-contrast-muted);
     --vs-button-background-color: var(--vs-background-color-high-contrast-button);
     --vs-button-border-color: var(--vs-border-color-high-contrast-button);
   }
 
-  .vsc-button:is(:disabled, [disabled], [data-disabled="true"])[data-tone="static-black"][data-visual="bold"] {
+  .vsc-button:is(:disabled, [data-disabled], [data-status="disabled"])[data-tone="static-black"][data-visual="bold"] {
     --vs-button-text-color: var(--vs-text-color-high-contrast-muted);
     --vs-button-background-color: var(--vs-background-color-high-contrast-button);
     --vs-button-border-color: var(--vs-border-color-high-contrast-button);
   }
 
-  .vsc-button:is(:disabled, [disabled], [data-disabled="true"])[data-tone="static-black"][data-visual="outline"] {
+  .vsc-button:is(:disabled, [data-disabled], [data-status="disabled"])[data-tone="static-black"][data-visual="outline"] {
     --vs-button-text-color: var(--vs-text-color-high-contrast-muted);
     --vs-button-background-color: var(--vs-background-color-high-contrast-button);
     --vs-button-border-color: var(--vs-border-color-high-contrast-button);
   }
 
-  .vsc-button:is(:disabled, [disabled], [data-disabled="true"])[data-tone="static-black"][data-visual="plain"] {
+  .vsc-button:is(:disabled, [data-disabled], [data-status="disabled"])[data-tone="static-black"][data-visual="plain"] {
     --vs-button-text-color: var(--vs-text-color-high-contrast-muted);
     --vs-button-background-color: var(--vs-background-color-high-contrast-button);
     --vs-button-border-color: var(--vs-border-color-high-contrast-button);
   }
 
-  .vsc-button:is(:disabled, [disabled], [data-disabled="true"])[data-tone="static-white"][data-visual="bold"] {
+  .vsc-button:is(:disabled, [data-disabled], [data-status="disabled"])[data-tone="static-white"][data-visual="bold"] {
     --vs-button-text-color: var(--vs-text-color-high-contrast-muted);
     --vs-button-background-color: var(--vs-background-color-high-contrast-button);
     --vs-button-border-color: var(--vs-border-color-high-contrast-button);
   }
 
-  .vsc-button:is(:disabled, [disabled], [data-disabled="true"])[data-tone="static-white"][data-visual="outline"] {
+  .vsc-button:is(:disabled, [data-disabled], [data-status="disabled"])[data-tone="static-white"][data-visual="outline"] {
     --vs-button-text-color: var(--vs-text-color-high-contrast-muted);
     --vs-button-background-color: var(--vs-background-color-high-contrast-button);
     --vs-button-border-color: var(--vs-border-color-high-contrast-button);
   }
 
-  .vsc-button:is(:disabled, [disabled], [data-disabled="true"])[data-tone="static-white"][data-visual="plain"] {
+  .vsc-button:is(:disabled, [data-disabled], [data-status="disabled"])[data-tone="static-white"][data-visual="plain"] {
     --vs-button-text-color: var(--vs-text-color-high-contrast-muted);
     --vs-button-background-color: var(--vs-background-color-high-contrast-button);
     --vs-button-border-color: var(--vs-border-color-high-contrast-button);
   }
 
-  .vsc-button:is(:hover, [data-hovered="true"]):not(:disabled, [disabled], [data-disabled="true"]):not([data-pending="true"])[data-tone="accent"][data-visual="bold"] {
+  .vsc-button:is(:hover, [data-hovered]):not(:disabled, [data-disabled], [aria-disabled])[data-tone="accent"][data-visual="bold"] {
     --vs-button-text-color: var(--vs-text-color-high-contrast-button-primary);
     --vs-button-background-color: var(--vs-background-color-high-contrast-highlight);
     --vs-button-border-color: var(--vs-border-color-high-contrast-highlight);
   }
 
-  .vsc-button:is(:active, [data-pressed="true"]):not(:disabled, [disabled], [data-disabled="true"]):not([data-pending="true"])[data-tone="accent"][data-visual="bold"] {
+  .vsc-button:is(:active, [data-pressed]):not(:disabled, [data-disabled], [aria-disabled])[data-tone="accent"][data-visual="bold"] {
     --vs-button-text-color: var(--vs-text-color-high-contrast-button-primary);
     --vs-button-background-color: var(--vs-background-color-high-contrast-highlight);
     --vs-button-border-color: var(--vs-border-color-high-contrast-highlight);
   }
 
-  .vsc-button:is(:hover, [data-hovered="true"]):not(:disabled, [disabled], [data-disabled="true"]):not([data-pending="true"])[data-tone="accent"][data-visual="outline"] {
+  .vsc-button:is(:hover, [data-hovered]):not(:disabled, [data-disabled], [aria-disabled])[data-tone="accent"][data-visual="outline"] {
     --vs-button-text-color: var(--vs-text-color-high-contrast-highlight);
     --vs-button-background-color: var(--vs-background-color-high-contrast-button);
     --vs-button-border-color: var(--vs-border-color-high-contrast-highlight);
   }
 
-  .vsc-button:is(:hover, [data-hovered="true"]):not(:disabled, [disabled], [data-disabled="true"]):not([data-pending="true"])[data-tone="accent"][data-visual="plain"] {
+  .vsc-button:is(:hover, [data-hovered]):not(:disabled, [data-disabled], [aria-disabled])[data-tone="accent"][data-visual="plain"] {
     --vs-button-text-color: var(--vs-text-color-high-contrast-highlight);
     --vs-button-background-color: var(--vs-background-color-high-contrast-button);
     --vs-button-border-color: var(--vs-border-color-high-contrast-highlight);
   }
 
-  .vsc-button:is(:hover, [data-hovered="true"]):not(:disabled, [disabled], [data-disabled="true"]):not([data-pending="true"])[data-tone="critical"][data-visual="bold"] {
+  .vsc-button:is(:hover, [data-hovered]):not(:disabled, [data-disabled], [aria-disabled])[data-tone="critical"][data-visual="bold"] {
     --vs-button-text-color: var(--vs-text-color-high-contrast-highlight);
     --vs-button-background-color: var(--vs-background-color-high-contrast-button);
     --vs-button-border-color: var(--vs-border-color-high-contrast-highlight);
   }
 
-  .vsc-button:is(:hover, [data-hovered="true"]):not(:disabled, [disabled], [data-disabled="true"]):not([data-pending="true"])[data-tone="critical"][data-visual="outline"] {
+  .vsc-button:is(:hover, [data-hovered]):not(:disabled, [data-disabled], [aria-disabled])[data-tone="critical"][data-visual="outline"] {
     --vs-button-text-color: var(--vs-text-color-high-contrast-highlight);
     --vs-button-background-color: var(--vs-background-color-high-contrast-button);
     --vs-button-border-color: var(--vs-border-color-high-contrast-highlight);
   }
 
-  .vsc-button:is(:hover, [data-hovered="true"]):not(:disabled, [disabled], [data-disabled="true"]):not([data-pending="true"])[data-tone="critical"][data-visual="plain"] {
+  .vsc-button:is(:hover, [data-hovered]):not(:disabled, [data-disabled], [aria-disabled])[data-tone="critical"][data-visual="plain"] {
     --vs-button-text-color: var(--vs-text-color-high-contrast-highlight);
     --vs-button-background-color: var(--vs-background-color-high-contrast-button);
     --vs-button-border-color: var(--vs-border-color-high-contrast-highlight);
   }
 
-  .vsc-button:is(:hover, [data-hovered="true"]):not(:disabled, [disabled], [data-disabled="true"]):not([data-pending="true"])[data-tone="neutral"][data-visual="bold"] {
+  .vsc-button:is(:hover, [data-hovered]):not(:disabled, [data-disabled], [aria-disabled])[data-tone="neutral"][data-visual="bold"] {
     --vs-button-text-color: var(--vs-text-color-high-contrast-highlight);
     --vs-button-background-color: var(--vs-background-color-high-contrast-button);
     --vs-button-border-color: var(--vs-border-color-high-contrast-highlight);
   }
 
-  .vsc-button:is(:hover, [data-hovered="true"]):not(:disabled, [disabled], [data-disabled="true"]):not([data-pending="true"])[data-tone="neutral"][data-visual="outline"] {
+  .vsc-button:is(:hover, [data-hovered]):not(:disabled, [data-disabled], [aria-disabled])[data-tone="neutral"][data-visual="outline"] {
     --vs-button-text-color: var(--vs-text-color-high-contrast-highlight);
     --vs-button-background-color: var(--vs-background-color-high-contrast-button);
     --vs-button-border-color: var(--vs-border-color-high-contrast-highlight);
   }
 
-  .vsc-button:is(:hover, [data-hovered="true"]):not(:disabled, [disabled], [data-disabled="true"]):not([data-pending="true"])[data-tone="neutral"][data-visual="plain"] {
+  .vsc-button:is(:hover, [data-hovered]):not(:disabled, [data-disabled], [aria-disabled])[data-tone="neutral"][data-visual="plain"] {
     --vs-button-text-color: var(--vs-text-color-high-contrast-highlight);
     --vs-button-background-color: var(--vs-background-color-high-contrast-button);
     --vs-button-border-color: var(--vs-border-color-high-contrast-highlight);
   }
 
-  .vsc-button:is(:hover, [data-hovered="true"]):not(:disabled, [disabled], [data-disabled="true"]):not([data-pending="true"])[data-tone="static-black"][data-visual="bold"] {
+  .vsc-button:is(:hover, [data-hovered]):not(:disabled, [data-disabled], [aria-disabled])[data-tone="static-black"][data-visual="bold"] {
     --vs-button-text-color: var(--vs-text-color-high-contrast-highlight);
     --vs-button-background-color: var(--vs-background-color-high-contrast-button);
     --vs-button-border-color: var(--vs-border-color-high-contrast-highlight);
   }
 
-  .vsc-button:is(:hover, [data-hovered="true"]):not(:disabled, [disabled], [data-disabled="true"]):not([data-pending="true"])[data-tone="static-black"][data-visual="outline"] {
+  .vsc-button:is(:hover, [data-hovered]):not(:disabled, [data-disabled], [aria-disabled])[data-tone="static-black"][data-visual="outline"] {
     --vs-button-text-color: var(--vs-text-color-high-contrast-highlight);
     --vs-button-background-color: var(--vs-background-color-high-contrast-button);
     --vs-button-border-color: var(--vs-border-color-high-contrast-highlight);
   }
 
-  .vsc-button:is(:hover, [data-hovered="true"]):not(:disabled, [disabled], [data-disabled="true"]):not([data-pending="true"])[data-tone="static-black"][data-visual="plain"] {
+  .vsc-button:is(:hover, [data-hovered]):not(:disabled, [data-disabled], [aria-disabled])[data-tone="static-black"][data-visual="plain"] {
     --vs-button-text-color: var(--vs-text-color-high-contrast-highlight);
     --vs-button-background-color: var(--vs-background-color-high-contrast-button);
     --vs-button-border-color: var(--vs-border-color-high-contrast-highlight);
   }
 
-  .vsc-button:is(:hover, [data-hovered="true"]):not(:disabled, [disabled], [data-disabled="true"]):not([data-pending="true"])[data-tone="static-white"][data-visual="bold"] {
+  .vsc-button:is(:hover, [data-hovered]):not(:disabled, [data-disabled], [aria-disabled])[data-tone="static-white"][data-visual="bold"] {
     --vs-button-text-color: var(--vs-text-color-high-contrast-highlight);
     --vs-button-background-color: var(--vs-background-color-high-contrast-button);
     --vs-button-border-color: var(--vs-border-color-high-contrast-highlight);
   }
 
-  .vsc-button:is(:hover, [data-hovered="true"]):not(:disabled, [disabled], [data-disabled="true"]):not([data-pending="true"])[data-tone="static-white"][data-visual="outline"] {
+  .vsc-button:is(:hover, [data-hovered]):not(:disabled, [data-disabled], [aria-disabled])[data-tone="static-white"][data-visual="outline"] {
     --vs-button-text-color: var(--vs-text-color-high-contrast-highlight);
     --vs-button-background-color: var(--vs-background-color-high-contrast-button);
     --vs-button-border-color: var(--vs-border-color-high-contrast-highlight);
   }
 
-  .vsc-button:is(:hover, [data-hovered="true"]):not(:disabled, [disabled], [data-disabled="true"]):not([data-pending="true"])[data-tone="static-white"][data-visual="plain"] {
+  .vsc-button:is(:hover, [data-hovered]):not(:disabled, [data-disabled], [aria-disabled])[data-tone="static-white"][data-visual="plain"] {
     --vs-button-text-color: var(--vs-text-color-high-contrast-highlight);
     --vs-button-background-color: var(--vs-background-color-high-contrast-button);
     --vs-button-border-color: var(--vs-border-color-high-contrast-highlight);
   }
 
-  .vsc-button:is(:active, [data-pressed="true"]):not(:disabled, [disabled], [data-disabled="true"]):not([data-pending="true"])[data-tone="accent"][data-visual="outline"] {
+  .vsc-button:is(:active, [data-pressed]):not(:disabled, [data-disabled], [aria-disabled])[data-tone="accent"][data-visual="outline"] {
     --vs-button-text-color: var(--vs-text-color-high-contrast-highlight);
     --vs-button-background-color: var(--vs-background-color-high-contrast-button);
     --vs-button-border-color: var(--vs-border-color-high-contrast-highlight);
   }
 
-  .vsc-button:is(:active, [data-pressed="true"]):not(:disabled, [disabled], [data-disabled="true"]):not([data-pending="true"])[data-tone="accent"][data-visual="plain"] {
+  .vsc-button:is(:active, [data-pressed]):not(:disabled, [data-disabled], [aria-disabled])[data-tone="accent"][data-visual="plain"] {
     --vs-button-text-color: var(--vs-text-color-high-contrast-highlight);
     --vs-button-background-color: var(--vs-background-color-high-contrast-button);
     --vs-button-border-color: var(--vs-border-color-high-contrast-highlight);
   }
 
-  .vsc-button:is(:active, [data-pressed="true"]):not(:disabled, [disabled], [data-disabled="true"]):not([data-pending="true"])[data-tone="critical"][data-visual="bold"] {
+  .vsc-button:is(:active, [data-pressed]):not(:disabled, [data-disabled], [aria-disabled])[data-tone="critical"][data-visual="bold"] {
     --vs-button-text-color: var(--vs-text-color-high-contrast-highlight);
     --vs-button-background-color: var(--vs-background-color-high-contrast-button);
     --vs-button-border-color: var(--vs-border-color-high-contrast-highlight);
   }
 
-  .vsc-button:is(:active, [data-pressed="true"]):not(:disabled, [disabled], [data-disabled="true"]):not([data-pending="true"])[data-tone="critical"][data-visual="outline"] {
+  .vsc-button:is(:active, [data-pressed]):not(:disabled, [data-disabled], [aria-disabled])[data-tone="critical"][data-visual="outline"] {
     --vs-button-text-color: var(--vs-text-color-high-contrast-highlight);
     --vs-button-background-color: var(--vs-background-color-high-contrast-button);
     --vs-button-border-color: var(--vs-border-color-high-contrast-highlight);
   }
 
-  .vsc-button:is(:active, [data-pressed="true"]):not(:disabled, [disabled], [data-disabled="true"]):not([data-pending="true"])[data-tone="critical"][data-visual="plain"] {
+  .vsc-button:is(:active, [data-pressed]):not(:disabled, [data-disabled], [aria-disabled])[data-tone="critical"][data-visual="plain"] {
     --vs-button-text-color: var(--vs-text-color-high-contrast-highlight);
     --vs-button-background-color: var(--vs-background-color-high-contrast-button);
     --vs-button-border-color: var(--vs-border-color-high-contrast-highlight);
   }
 
-  .vsc-button:is(:active, [data-pressed="true"]):not(:disabled, [disabled], [data-disabled="true"]):not([data-pending="true"])[data-tone="neutral"][data-visual="bold"] {
+  .vsc-button:is(:active, [data-pressed]):not(:disabled, [data-disabled], [aria-disabled])[data-tone="neutral"][data-visual="bold"] {
     --vs-button-text-color: var(--vs-text-color-high-contrast-highlight);
     --vs-button-background-color: var(--vs-background-color-high-contrast-button);
     --vs-button-border-color: var(--vs-border-color-high-contrast-highlight);
   }
 
-  .vsc-button:is(:active, [data-pressed="true"]):not(:disabled, [disabled], [data-disabled="true"]):not([data-pending="true"])[data-tone="neutral"][data-visual="outline"] {
+  .vsc-button:is(:active, [data-pressed]):not(:disabled, [data-disabled], [aria-disabled])[data-tone="neutral"][data-visual="outline"] {
     --vs-button-text-color: var(--vs-text-color-high-contrast-highlight);
     --vs-button-background-color: var(--vs-background-color-high-contrast-button);
     --vs-button-border-color: var(--vs-border-color-high-contrast-highlight);
   }
 
-  .vsc-button:is(:active, [data-pressed="true"]):not(:disabled, [disabled], [data-disabled="true"]):not([data-pending="true"])[data-tone="neutral"][data-visual="plain"] {
+  .vsc-button:is(:active, [data-pressed]):not(:disabled, [data-disabled], [aria-disabled])[data-tone="neutral"][data-visual="plain"] {
     --vs-button-text-color: var(--vs-text-color-high-contrast-highlight);
     --vs-button-background-color: var(--vs-background-color-high-contrast-button);
     --vs-button-border-color: var(--vs-border-color-high-contrast-highlight);
   }
 
-  .vsc-button:is(:active, [data-pressed="true"]):not(:disabled, [disabled], [data-disabled="true"]):not([data-pending="true"])[data-tone="static-black"][data-visual="bold"] {
+  .vsc-button:is(:active, [data-pressed]):not(:disabled, [data-disabled], [aria-disabled])[data-tone="static-black"][data-visual="bold"] {
     --vs-button-text-color: var(--vs-text-color-high-contrast-highlight);
     --vs-button-background-color: var(--vs-background-color-high-contrast-button);
     --vs-button-border-color: var(--vs-border-color-high-contrast-highlight);
   }
 
-  .vsc-button:is(:active, [data-pressed="true"]):not(:disabled, [disabled], [data-disabled="true"]):not([data-pending="true"])[data-tone="static-black"][data-visual="outline"] {
+  .vsc-button:is(:active, [data-pressed]):not(:disabled, [data-disabled], [aria-disabled])[data-tone="static-black"][data-visual="outline"] {
     --vs-button-text-color: var(--vs-text-color-high-contrast-highlight);
     --vs-button-background-color: var(--vs-background-color-high-contrast-button);
     --vs-button-border-color: var(--vs-border-color-high-contrast-highlight);
   }
 
-  .vsc-button:is(:active, [data-pressed="true"]):not(:disabled, [disabled], [data-disabled="true"]):not([data-pending="true"])[data-tone="static-black"][data-visual="plain"] {
+  .vsc-button:is(:active, [data-pressed]):not(:disabled, [data-disabled], [aria-disabled])[data-tone="static-black"][data-visual="plain"] {
     --vs-button-text-color: var(--vs-text-color-high-contrast-highlight);
     --vs-button-background-color: var(--vs-background-color-high-contrast-button);
     --vs-button-border-color: var(--vs-border-color-high-contrast-highlight);
   }
 
-  .vsc-button:is(:active, [data-pressed="true"]):not(:disabled, [disabled], [data-disabled="true"]):not([data-pending="true"])[data-tone="static-white"][data-visual="bold"] {
+  .vsc-button:is(:active, [data-pressed]):not(:disabled, [data-disabled], [aria-disabled])[data-tone="static-white"][data-visual="bold"] {
     --vs-button-text-color: var(--vs-text-color-high-contrast-highlight);
     --vs-button-background-color: var(--vs-background-color-high-contrast-button);
     --vs-button-border-color: var(--vs-border-color-high-contrast-highlight);
   }
 
-  .vsc-button:is(:active, [data-pressed="true"]):not(:disabled, [disabled], [data-disabled="true"]):not([data-pending="true"])[data-tone="static-white"][data-visual="outline"] {
+  .vsc-button:is(:active, [data-pressed]):not(:disabled, [data-disabled], [aria-disabled])[data-tone="static-white"][data-visual="outline"] {
     --vs-button-text-color: var(--vs-text-color-high-contrast-highlight);
     --vs-button-background-color: var(--vs-background-color-high-contrast-button);
     --vs-button-border-color: var(--vs-border-color-high-contrast-highlight);
   }
 
-  .vsc-button:is(:active, [data-pressed="true"]):not(:disabled, [disabled], [data-disabled="true"]):not([data-pending="true"])[data-tone="static-white"][data-visual="plain"] {
+  .vsc-button:is(:active, [data-pressed]):not(:disabled, [data-disabled], [aria-disabled])[data-tone="static-white"][data-visual="plain"] {
     --vs-button-text-color: var(--vs-text-color-high-contrast-highlight);
     --vs-button-background-color: var(--vs-background-color-high-contrast-button);
     --vs-button-border-color: var(--vs-border-color-high-contrast-highlight);
@@ -499,7 +499,7 @@
 }
 
 @media (forced-colors: active) {
-  .vsc-link:is(:disabled, [disabled], [data-disabled="true"]) {
+  .vsc-link:is(:disabled, [data-disabled], [data-status="disabled"]) {
     --vs-link-opacity: var(--vs-opacity-disabled-high-contrast);
   }
 }
@@ -606,7 +606,7 @@
 }
 
 @media (forced-colors: active) {
-  .vsc-toggle-button:is(:disabled, [disabled], [data-disabled="true"]) {
+  .vsc-toggle-button:is(:disabled, [data-disabled], [data-status="disabled"]) {
     --vs-toggle-button-opacity: var(--vs-opacity-disabled-high-contrast);
   }
 
@@ -646,518 +646,242 @@
     --vs-toggle-button-border-color: ButtonBorder;
   }
 
-  .vsc-toggle-button[data-tone="static-black"][data-visual="bold"] {
-    --vs-toggle-button-text-color: var(--vs-text-color-high-contrast-button);
-    --vs-toggle-button-background-color: ButtonFace;
-    --vs-toggle-button-border-color: ButtonBorder;
-  }
-
-  .vsc-toggle-button[data-tone="static-black"][data-visual="soft"] {
-    --vs-toggle-button-text-color: var(--vs-text-color-high-contrast-button);
-    --vs-toggle-button-background-color: ButtonFace;
-    --vs-toggle-button-border-color: ButtonBorder;
-  }
-
-  .vsc-toggle-button[data-tone="static-black"][data-visual="plain"] {
-    --vs-toggle-button-text-color: var(--vs-text-color-high-contrast-button);
-    --vs-toggle-button-background-color: ButtonFace;
-    --vs-toggle-button-border-color: ButtonBorder;
-  }
-
-  .vsc-toggle-button[data-tone="static-white"][data-visual="bold"] {
-    --vs-toggle-button-text-color: var(--vs-text-color-high-contrast-button);
-    --vs-toggle-button-background-color: ButtonFace;
-    --vs-toggle-button-border-color: ButtonBorder;
-  }
-
-  .vsc-toggle-button[data-tone="static-white"][data-visual="soft"] {
-    --vs-toggle-button-text-color: var(--vs-text-color-high-contrast-button);
-    --vs-toggle-button-background-color: ButtonFace;
-    --vs-toggle-button-border-color: ButtonBorder;
-  }
-
-  .vsc-toggle-button[data-tone="static-white"][data-visual="plain"] {
-    --vs-toggle-button-text-color: var(--vs-text-color-high-contrast-button);
-    --vs-toggle-button-background-color: ButtonFace;
-    --vs-toggle-button-border-color: ButtonBorder;
-  }
-
-  .vsc-toggle-button:is(:disabled, [disabled], [data-disabled="true"])[data-tone="accent"][data-visual="bold"] {
+  .vsc-toggle-button:is(:disabled, [data-disabled], [data-status="disabled"])[data-tone="accent"][data-visual="bold"] {
     --vs-toggle-button-text-color: var(--vs-text-color-high-contrast-muted);
     --vs-toggle-button-background-color: ButtonFace;
     --vs-toggle-button-border-color: ButtonFace;
   }
 
-  .vsc-toggle-button:is(:disabled, [disabled], [data-disabled="true"])[data-tone="accent"][data-visual="soft"] {
+  .vsc-toggle-button:is(:disabled, [data-disabled], [data-status="disabled"])[data-tone="accent"][data-visual="soft"] {
     --vs-toggle-button-text-color: var(--vs-text-color-high-contrast-muted);
     --vs-toggle-button-background-color: ButtonFace;
     --vs-toggle-button-border-color: ButtonFace;
   }
 
-  .vsc-toggle-button:is(:disabled, [disabled], [data-disabled="true"])[data-tone="accent"][data-visual="plain"] {
+  .vsc-toggle-button:is(:disabled, [data-disabled], [data-status="disabled"])[data-tone="accent"][data-visual="plain"] {
     --vs-toggle-button-text-color: var(--vs-text-color-high-contrast-muted);
     --vs-toggle-button-background-color: ButtonFace;
     --vs-toggle-button-border-color: ButtonFace;
   }
 
-  .vsc-toggle-button:is(:disabled, [disabled], [data-disabled="true"])[data-tone="neutral"][data-visual="bold"] {
+  .vsc-toggle-button:is(:disabled, [data-disabled], [data-status="disabled"])[data-tone="neutral"][data-visual="bold"] {
     --vs-toggle-button-text-color: var(--vs-text-color-high-contrast-muted);
     --vs-toggle-button-background-color: ButtonFace;
     --vs-toggle-button-border-color: ButtonFace;
   }
 
-  .vsc-toggle-button:is(:disabled, [disabled], [data-disabled="true"])[data-tone="neutral"][data-visual="soft"] {
+  .vsc-toggle-button:is(:disabled, [data-disabled], [data-status="disabled"])[data-tone="neutral"][data-visual="soft"] {
     --vs-toggle-button-text-color: var(--vs-text-color-high-contrast-muted);
     --vs-toggle-button-background-color: ButtonFace;
     --vs-toggle-button-border-color: ButtonFace;
   }
 
-  .vsc-toggle-button:is(:disabled, [disabled], [data-disabled="true"])[data-tone="neutral"][data-visual="plain"] {
+  .vsc-toggle-button:is(:disabled, [data-disabled], [data-status="disabled"])[data-tone="neutral"][data-visual="plain"] {
     --vs-toggle-button-text-color: var(--vs-text-color-high-contrast-muted);
     --vs-toggle-button-background-color: ButtonFace;
     --vs-toggle-button-border-color: ButtonFace;
   }
 
-  .vsc-toggle-button:is(:disabled, [disabled], [data-disabled="true"])[data-tone="static-black"][data-visual="bold"] {
-    --vs-toggle-button-text-color: var(--vs-text-color-high-contrast-muted);
-    --vs-toggle-button-background-color: ButtonFace;
-    --vs-toggle-button-border-color: ButtonFace;
-  }
-
-  .vsc-toggle-button:is(:disabled, [disabled], [data-disabled="true"])[data-tone="static-black"][data-visual="soft"] {
-    --vs-toggle-button-text-color: var(--vs-text-color-high-contrast-muted);
-    --vs-toggle-button-background-color: ButtonFace;
-    --vs-toggle-button-border-color: ButtonFace;
-  }
-
-  .vsc-toggle-button:is(:disabled, [disabled], [data-disabled="true"])[data-tone="static-black"][data-visual="plain"] {
-    --vs-toggle-button-text-color: var(--vs-text-color-high-contrast-muted);
-    --vs-toggle-button-background-color: ButtonFace;
-    --vs-toggle-button-border-color: ButtonFace;
-  }
-
-  .vsc-toggle-button:is(:disabled, [disabled], [data-disabled="true"])[data-tone="static-white"][data-visual="bold"] {
-    --vs-toggle-button-text-color: var(--vs-text-color-high-contrast-muted);
-    --vs-toggle-button-background-color: ButtonFace;
-    --vs-toggle-button-border-color: ButtonFace;
-  }
-
-  .vsc-toggle-button:is(:disabled, [disabled], [data-disabled="true"])[data-tone="static-white"][data-visual="soft"] {
-    --vs-toggle-button-text-color: var(--vs-text-color-high-contrast-muted);
-    --vs-toggle-button-background-color: ButtonFace;
-    --vs-toggle-button-border-color: ButtonFace;
-  }
-
-  .vsc-toggle-button:is(:disabled, [disabled], [data-disabled="true"])[data-tone="static-white"][data-visual="plain"] {
-    --vs-toggle-button-text-color: var(--vs-text-color-high-contrast-muted);
-    --vs-toggle-button-background-color: ButtonFace;
-    --vs-toggle-button-border-color: ButtonFace;
-  }
-
-  .vsc-toggle-button:is([data-selected="true"], [aria-selected="true"])[data-tone="accent"][data-visual="bold"] {
+  .vsc-toggle-button:is([data-selected], [aria-selected])[data-tone="accent"][data-visual="bold"] {
     --vs-toggle-button-text-color: var(--vs-text-color-high-contrast-button);
     --vs-toggle-button-background-color: var(--vs-background-color-high-contrast-button-primary);
     --vs-toggle-button-border-color: var(--vs-border-color-high-contrast-button-primary);
   }
 
-  .vsc-toggle-button:is([data-selected="true"], [aria-selected="true"])[data-tone="accent"][data-visual="soft"] {
+  .vsc-toggle-button:is([data-selected], [aria-selected])[data-tone="accent"][data-visual="soft"] {
     --vs-toggle-button-text-color: var(--vs-text-color-high-contrast-button);
     --vs-toggle-button-background-color: var(--vs-background-color-high-contrast-button-primary);
     --vs-toggle-button-border-color: var(--vs-border-color-high-contrast-button-primary);
   }
 
-  .vsc-toggle-button:is([data-selected="true"], [aria-selected="true"])[data-tone="accent"][data-visual="plain"] {
+  .vsc-toggle-button:is([data-selected], [aria-selected])[data-tone="accent"][data-visual="plain"] {
     --vs-toggle-button-text-color: var(--vs-text-color-high-contrast-button);
     --vs-toggle-button-background-color: var(--vs-background-color-high-contrast-button-primary);
     --vs-toggle-button-border-color: var(--vs-border-color-high-contrast-button-primary);
   }
 
-  .vsc-toggle-button:is([data-selected="true"], [aria-selected="true"])[data-tone="neutral"][data-visual="bold"] {
+  .vsc-toggle-button:is([data-selected], [aria-selected])[data-tone="neutral"][data-visual="bold"] {
     --vs-toggle-button-text-color: var(--vs-text-color-high-contrast-button);
     --vs-toggle-button-background-color: var(--vs-background-color-high-contrast-button-primary);
     --vs-toggle-button-border-color: var(--vs-border-color-high-contrast-button-primary);
   }
 
-  .vsc-toggle-button:is([data-selected="true"], [aria-selected="true"])[data-tone="neutral"][data-visual="soft"] {
+  .vsc-toggle-button:is([data-selected], [aria-selected])[data-tone="neutral"][data-visual="soft"] {
     --vs-toggle-button-text-color: var(--vs-text-color-high-contrast-button);
     --vs-toggle-button-background-color: var(--vs-background-color-high-contrast-button-primary);
     --vs-toggle-button-border-color: var(--vs-border-color-high-contrast-button-primary);
   }
 
-  .vsc-toggle-button:is([data-selected="true"], [aria-selected="true"])[data-tone="neutral"][data-visual="plain"] {
+  .vsc-toggle-button:is([data-selected], [aria-selected])[data-tone="neutral"][data-visual="plain"] {
     --vs-toggle-button-text-color: var(--vs-text-color-high-contrast-button);
     --vs-toggle-button-background-color: var(--vs-background-color-high-contrast-button-primary);
     --vs-toggle-button-border-color: var(--vs-border-color-high-contrast-button-primary);
   }
 
-  .vsc-toggle-button:is([data-selected="true"], [aria-selected="true"])[data-tone="static-black"][data-visual="bold"] {
-    --vs-toggle-button-text-color: var(--vs-text-color-high-contrast-button);
-    --vs-toggle-button-background-color: var(--vs-background-color-high-contrast-button-primary);
-    --vs-toggle-button-border-color: var(--vs-border-color-high-contrast-button-primary);
-  }
-
-  .vsc-toggle-button:is([data-selected="true"], [aria-selected="true"])[data-tone="static-black"][data-visual="soft"] {
-    --vs-toggle-button-text-color: var(--vs-text-color-high-contrast-button);
-    --vs-toggle-button-background-color: var(--vs-background-color-high-contrast-button-primary);
-    --vs-toggle-button-border-color: var(--vs-border-color-high-contrast-button-primary);
-  }
-
-  .vsc-toggle-button:is([data-selected="true"], [aria-selected="true"])[data-tone="static-black"][data-visual="plain"] {
-    --vs-toggle-button-text-color: var(--vs-text-color-high-contrast-button);
-    --vs-toggle-button-background-color: var(--vs-background-color-high-contrast-button-primary);
-    --vs-toggle-button-border-color: var(--vs-border-color-high-contrast-button-primary);
-  }
-
-  .vsc-toggle-button:is([data-selected="true"], [aria-selected="true"])[data-tone="static-white"][data-visual="bold"] {
-    --vs-toggle-button-text-color: var(--vs-text-color-high-contrast-button);
-    --vs-toggle-button-background-color: var(--vs-background-color-high-contrast-button-primary);
-    --vs-toggle-button-border-color: var(--vs-border-color-high-contrast-button-primary);
-  }
-
-  .vsc-toggle-button:is([data-selected="true"], [aria-selected="true"])[data-tone="static-white"][data-visual="soft"] {
-    --vs-toggle-button-text-color: var(--vs-text-color-high-contrast-button);
-    --vs-toggle-button-background-color: var(--vs-background-color-high-contrast-button-primary);
-    --vs-toggle-button-border-color: var(--vs-border-color-high-contrast-button-primary);
-  }
-
-  .vsc-toggle-button:is([data-selected="true"], [aria-selected="true"])[data-tone="static-white"][data-visual="plain"] {
-    --vs-toggle-button-text-color: var(--vs-text-color-high-contrast-button);
-    --vs-toggle-button-background-color: var(--vs-background-color-high-contrast-button-primary);
-    --vs-toggle-button-border-color: var(--vs-border-color-high-contrast-button-primary);
-  }
-
-  .vsc-toggle-button:is(:hover, [data-hovered="true"]):not(:disabled, [disabled], [data-disabled="true"])[data-tone="accent"][data-visual="bold"] {
+  .vsc-toggle-button:is(:hover, [data-hovered]):not(:disabled, [data-disabled], [aria-disabled])[data-tone="accent"][data-visual="bold"] {
     --vs-toggle-button-text-color: var(--vs-text-color-high-contrast-highlight);
     --vs-toggle-button-background-color: ButtonFace;
     --vs-toggle-button-border-color: var(--vs-border-color-high-contrast-highlight);
   }
 
-  .vsc-toggle-button:is(:hover, [data-hovered="true"]):not(:disabled, [disabled], [data-disabled="true"])[data-tone="accent"][data-visual="soft"] {
+  .vsc-toggle-button:is(:hover, [data-hovered]):not(:disabled, [data-disabled], [aria-disabled])[data-tone="accent"][data-visual="soft"] {
     --vs-toggle-button-text-color: var(--vs-text-color-high-contrast-highlight);
     --vs-toggle-button-background-color: ButtonFace;
     --vs-toggle-button-border-color: var(--vs-border-color-high-contrast-highlight);
   }
 
-  .vsc-toggle-button:is(:hover, [data-hovered="true"]):not(:disabled, [disabled], [data-disabled="true"])[data-tone="accent"][data-visual="plain"] {
+  .vsc-toggle-button:is(:hover, [data-hovered]):not(:disabled, [data-disabled], [aria-disabled])[data-tone="accent"][data-visual="plain"] {
     --vs-toggle-button-text-color: var(--vs-text-color-high-contrast-highlight);
     --vs-toggle-button-background-color: ButtonFace;
     --vs-toggle-button-border-color: var(--vs-border-color-high-contrast-highlight);
   }
 
-  .vsc-toggle-button:is(:hover, [data-hovered="true"]):not(:disabled, [disabled], [data-disabled="true"])[data-tone="neutral"][data-visual="bold"] {
+  .vsc-toggle-button:is(:hover, [data-hovered]):not(:disabled, [data-disabled], [aria-disabled])[data-tone="neutral"][data-visual="bold"] {
     --vs-toggle-button-text-color: var(--vs-text-color-high-contrast-highlight);
     --vs-toggle-button-background-color: ButtonFace;
     --vs-toggle-button-border-color: var(--vs-border-color-high-contrast-highlight);
   }
 
-  .vsc-toggle-button:is(:hover, [data-hovered="true"]):not(:disabled, [disabled], [data-disabled="true"])[data-tone="neutral"][data-visual="soft"] {
+  .vsc-toggle-button:is(:hover, [data-hovered]):not(:disabled, [data-disabled], [aria-disabled])[data-tone="neutral"][data-visual="soft"] {
     --vs-toggle-button-text-color: var(--vs-text-color-high-contrast-highlight);
     --vs-toggle-button-background-color: ButtonFace;
     --vs-toggle-button-border-color: var(--vs-border-color-high-contrast-highlight);
   }
 
-  .vsc-toggle-button:is(:hover, [data-hovered="true"]):not(:disabled, [disabled], [data-disabled="true"])[data-tone="neutral"][data-visual="plain"] {
+  .vsc-toggle-button:is(:hover, [data-hovered]):not(:disabled, [data-disabled], [aria-disabled])[data-tone="neutral"][data-visual="plain"] {
     --vs-toggle-button-text-color: var(--vs-text-color-high-contrast-highlight);
     --vs-toggle-button-background-color: ButtonFace;
     --vs-toggle-button-border-color: var(--vs-border-color-high-contrast-highlight);
   }
 
-  .vsc-toggle-button:is(:hover, [data-hovered="true"]):not(:disabled, [disabled], [data-disabled="true"])[data-tone="static-black"][data-visual="bold"] {
+  .vsc-toggle-button:is(:active, [data-pressed]):not(:disabled, [data-disabled], [aria-disabled])[data-tone="accent"][data-visual="bold"] {
     --vs-toggle-button-text-color: var(--vs-text-color-high-contrast-highlight);
     --vs-toggle-button-background-color: ButtonFace;
     --vs-toggle-button-border-color: var(--vs-border-color-high-contrast-highlight);
   }
 
-  .vsc-toggle-button:is(:hover, [data-hovered="true"]):not(:disabled, [disabled], [data-disabled="true"])[data-tone="static-black"][data-visual="soft"] {
+  .vsc-toggle-button:is(:active, [data-pressed]):not(:disabled, [data-disabled], [aria-disabled])[data-tone="accent"][data-visual="soft"] {
     --vs-toggle-button-text-color: var(--vs-text-color-high-contrast-highlight);
     --vs-toggle-button-background-color: ButtonFace;
     --vs-toggle-button-border-color: var(--vs-border-color-high-contrast-highlight);
   }
 
-  .vsc-toggle-button:is(:hover, [data-hovered="true"]):not(:disabled, [disabled], [data-disabled="true"])[data-tone="static-black"][data-visual="plain"] {
+  .vsc-toggle-button:is(:active, [data-pressed]):not(:disabled, [data-disabled], [aria-disabled])[data-tone="accent"][data-visual="plain"] {
     --vs-toggle-button-text-color: var(--vs-text-color-high-contrast-highlight);
     --vs-toggle-button-background-color: ButtonFace;
     --vs-toggle-button-border-color: var(--vs-border-color-high-contrast-highlight);
   }
 
-  .vsc-toggle-button:is(:hover, [data-hovered="true"]):not(:disabled, [disabled], [data-disabled="true"])[data-tone="static-white"][data-visual="bold"] {
+  .vsc-toggle-button:is(:active, [data-pressed]):not(:disabled, [data-disabled], [aria-disabled])[data-tone="neutral"][data-visual="bold"] {
     --vs-toggle-button-text-color: var(--vs-text-color-high-contrast-highlight);
     --vs-toggle-button-background-color: ButtonFace;
     --vs-toggle-button-border-color: var(--vs-border-color-high-contrast-highlight);
   }
 
-  .vsc-toggle-button:is(:hover, [data-hovered="true"]):not(:disabled, [disabled], [data-disabled="true"])[data-tone="static-white"][data-visual="soft"] {
+  .vsc-toggle-button:is(:active, [data-pressed]):not(:disabled, [data-disabled], [aria-disabled])[data-tone="neutral"][data-visual="soft"] {
     --vs-toggle-button-text-color: var(--vs-text-color-high-contrast-highlight);
     --vs-toggle-button-background-color: ButtonFace;
     --vs-toggle-button-border-color: var(--vs-border-color-high-contrast-highlight);
   }
 
-  .vsc-toggle-button:is(:hover, [data-hovered="true"]):not(:disabled, [disabled], [data-disabled="true"])[data-tone="static-white"][data-visual="plain"] {
+  .vsc-toggle-button:is(:active, [data-pressed]):not(:disabled, [data-disabled], [aria-disabled])[data-tone="neutral"][data-visual="plain"] {
     --vs-toggle-button-text-color: var(--vs-text-color-high-contrast-highlight);
     --vs-toggle-button-background-color: ButtonFace;
     --vs-toggle-button-border-color: var(--vs-border-color-high-contrast-highlight);
   }
 
-  .vsc-toggle-button:is(:active, [data-pressed="true"]):not(:disabled, [disabled], [data-disabled="true"])[data-tone="accent"][data-visual="bold"] {
-    --vs-toggle-button-text-color: var(--vs-text-color-high-contrast-highlight);
-    --vs-toggle-button-background-color: ButtonFace;
-    --vs-toggle-button-border-color: var(--vs-border-color-high-contrast-highlight);
-  }
-
-  .vsc-toggle-button:is(:active, [data-pressed="true"]):not(:disabled, [disabled], [data-disabled="true"])[data-tone="accent"][data-visual="soft"] {
-    --vs-toggle-button-text-color: var(--vs-text-color-high-contrast-highlight);
-    --vs-toggle-button-background-color: ButtonFace;
-    --vs-toggle-button-border-color: var(--vs-border-color-high-contrast-highlight);
-  }
-
-  .vsc-toggle-button:is(:active, [data-pressed="true"]):not(:disabled, [disabled], [data-disabled="true"])[data-tone="accent"][data-visual="plain"] {
-    --vs-toggle-button-text-color: var(--vs-text-color-high-contrast-highlight);
-    --vs-toggle-button-background-color: ButtonFace;
-    --vs-toggle-button-border-color: var(--vs-border-color-high-contrast-highlight);
-  }
-
-  .vsc-toggle-button:is(:active, [data-pressed="true"]):not(:disabled, [disabled], [data-disabled="true"])[data-tone="neutral"][data-visual="bold"] {
-    --vs-toggle-button-text-color: var(--vs-text-color-high-contrast-highlight);
-    --vs-toggle-button-background-color: ButtonFace;
-    --vs-toggle-button-border-color: var(--vs-border-color-high-contrast-highlight);
-  }
-
-  .vsc-toggle-button:is(:active, [data-pressed="true"]):not(:disabled, [disabled], [data-disabled="true"])[data-tone="neutral"][data-visual="soft"] {
-    --vs-toggle-button-text-color: var(--vs-text-color-high-contrast-highlight);
-    --vs-toggle-button-background-color: ButtonFace;
-    --vs-toggle-button-border-color: var(--vs-border-color-high-contrast-highlight);
-  }
-
-  .vsc-toggle-button:is(:active, [data-pressed="true"]):not(:disabled, [disabled], [data-disabled="true"])[data-tone="neutral"][data-visual="plain"] {
-    --vs-toggle-button-text-color: var(--vs-text-color-high-contrast-highlight);
-    --vs-toggle-button-background-color: ButtonFace;
-    --vs-toggle-button-border-color: var(--vs-border-color-high-contrast-highlight);
-  }
-
-  .vsc-toggle-button:is(:active, [data-pressed="true"]):not(:disabled, [disabled], [data-disabled="true"])[data-tone="static-black"][data-visual="bold"] {
-    --vs-toggle-button-text-color: var(--vs-text-color-high-contrast-highlight);
-    --vs-toggle-button-background-color: ButtonFace;
-    --vs-toggle-button-border-color: var(--vs-border-color-high-contrast-highlight);
-  }
-
-  .vsc-toggle-button:is(:active, [data-pressed="true"]):not(:disabled, [disabled], [data-disabled="true"])[data-tone="static-black"][data-visual="soft"] {
-    --vs-toggle-button-text-color: var(--vs-text-color-high-contrast-highlight);
-    --vs-toggle-button-background-color: ButtonFace;
-    --vs-toggle-button-border-color: var(--vs-border-color-high-contrast-highlight);
-  }
-
-  .vsc-toggle-button:is(:active, [data-pressed="true"]):not(:disabled, [disabled], [data-disabled="true"])[data-tone="static-black"][data-visual="plain"] {
-    --vs-toggle-button-text-color: var(--vs-text-color-high-contrast-highlight);
-    --vs-toggle-button-background-color: ButtonFace;
-    --vs-toggle-button-border-color: var(--vs-border-color-high-contrast-highlight);
-  }
-
-  .vsc-toggle-button:is(:active, [data-pressed="true"]):not(:disabled, [disabled], [data-disabled="true"])[data-tone="static-white"][data-visual="bold"] {
-    --vs-toggle-button-text-color: var(--vs-text-color-high-contrast-highlight);
-    --vs-toggle-button-background-color: ButtonFace;
-    --vs-toggle-button-border-color: var(--vs-border-color-high-contrast-highlight);
-  }
-
-  .vsc-toggle-button:is(:active, [data-pressed="true"]):not(:disabled, [disabled], [data-disabled="true"])[data-tone="static-white"][data-visual="soft"] {
-    --vs-toggle-button-text-color: var(--vs-text-color-high-contrast-highlight);
-    --vs-toggle-button-background-color: ButtonFace;
-    --vs-toggle-button-border-color: var(--vs-border-color-high-contrast-highlight);
-  }
-
-  .vsc-toggle-button:is(:active, [data-pressed="true"]):not(:disabled, [disabled], [data-disabled="true"])[data-tone="static-white"][data-visual="plain"] {
-    --vs-toggle-button-text-color: var(--vs-text-color-high-contrast-highlight);
-    --vs-toggle-button-background-color: ButtonFace;
-    --vs-toggle-button-border-color: var(--vs-border-color-high-contrast-highlight);
-  }
-
-  .vsc-toggle-button:is(:disabled, [disabled], [data-disabled="true"]):is([data-selected="true"], [aria-selected="true"])[data-tone="accent"][data-visual="bold"] {
+  .vsc-toggle-button:is(:disabled, [data-disabled], [data-status="disabled"]):is([data-selected], [aria-selected])[data-tone="accent"][data-visual="bold"] {
     --vs-toggle-button-text-color: var(--vs-text-color-high-contrast-button);
     --vs-toggle-button-background-color: var(--vs-background-color-high-contrast-muted);
     --vs-toggle-button-border-color: var(--vs-border-color-high-contrast-muted);
   }
 
-  .vsc-toggle-button:is(:disabled, [disabled], [data-disabled="true"]):is([data-selected="true"], [aria-selected="true"])[data-tone="accent"][data-visual="soft"] {
+  .vsc-toggle-button:is(:disabled, [data-disabled], [data-status="disabled"]):is([data-selected], [aria-selected])[data-tone="accent"][data-visual="soft"] {
     --vs-toggle-button-text-color: var(--vs-text-color-high-contrast-button);
     --vs-toggle-button-background-color: var(--vs-background-color-high-contrast-muted);
     --vs-toggle-button-border-color: var(--vs-border-color-high-contrast-muted);
   }
 
-  .vsc-toggle-button:is(:disabled, [disabled], [data-disabled="true"]):is([data-selected="true"], [aria-selected="true"])[data-tone="accent"][data-visual="plain"] {
+  .vsc-toggle-button:is(:disabled, [data-disabled], [data-status="disabled"]):is([data-selected], [aria-selected])[data-tone="accent"][data-visual="plain"] {
     --vs-toggle-button-text-color: var(--vs-text-color-high-contrast-button);
     --vs-toggle-button-background-color: var(--vs-background-color-high-contrast-muted);
     --vs-toggle-button-border-color: var(--vs-border-color-high-contrast-muted);
   }
 
-  .vsc-toggle-button:is(:disabled, [disabled], [data-disabled="true"]):is([data-selected="true"], [aria-selected="true"])[data-tone="neutral"][data-visual="bold"] {
+  .vsc-toggle-button:is(:disabled, [data-disabled], [data-status="disabled"]):is([data-selected], [aria-selected])[data-tone="neutral"][data-visual="bold"] {
     --vs-toggle-button-text-color: var(--vs-text-color-high-contrast-button);
     --vs-toggle-button-background-color: var(--vs-background-color-high-contrast-muted);
     --vs-toggle-button-border-color: var(--vs-border-color-high-contrast-muted);
   }
 
-  .vsc-toggle-button:is(:disabled, [disabled], [data-disabled="true"]):is([data-selected="true"], [aria-selected="true"])[data-tone="neutral"][data-visual="soft"] {
+  .vsc-toggle-button:is(:disabled, [data-disabled], [data-status="disabled"]):is([data-selected], [aria-selected])[data-tone="neutral"][data-visual="soft"] {
     --vs-toggle-button-text-color: var(--vs-text-color-high-contrast-button);
     --vs-toggle-button-background-color: var(--vs-background-color-high-contrast-muted);
     --vs-toggle-button-border-color: var(--vs-border-color-high-contrast-muted);
   }
 
-  .vsc-toggle-button:is(:disabled, [disabled], [data-disabled="true"]):is([data-selected="true"], [aria-selected="true"])[data-tone="neutral"][data-visual="plain"] {
+  .vsc-toggle-button:is(:disabled, [data-disabled], [data-status="disabled"]):is([data-selected], [aria-selected])[data-tone="neutral"][data-visual="plain"] {
     --vs-toggle-button-text-color: var(--vs-text-color-high-contrast-button);
     --vs-toggle-button-background-color: var(--vs-background-color-high-contrast-muted);
     --vs-toggle-button-border-color: var(--vs-border-color-high-contrast-muted);
   }
 
-  .vsc-toggle-button:is(:disabled, [disabled], [data-disabled="true"]):is([data-selected="true"], [aria-selected="true"])[data-tone="static-black"][data-visual="bold"] {
-    --vs-toggle-button-text-color: var(--vs-text-color-high-contrast-button);
-    --vs-toggle-button-background-color: var(--vs-background-color-high-contrast-muted);
-    --vs-toggle-button-border-color: var(--vs-border-color-high-contrast-muted);
-  }
-
-  .vsc-toggle-button:is(:disabled, [disabled], [data-disabled="true"]):is([data-selected="true"], [aria-selected="true"])[data-tone="static-black"][data-visual="soft"] {
-    --vs-toggle-button-text-color: var(--vs-text-color-high-contrast-button);
-    --vs-toggle-button-background-color: var(--vs-background-color-high-contrast-muted);
-    --vs-toggle-button-border-color: var(--vs-border-color-high-contrast-muted);
-  }
-
-  .vsc-toggle-button:is(:disabled, [disabled], [data-disabled="true"]):is([data-selected="true"], [aria-selected="true"])[data-tone="static-black"][data-visual="plain"] {
-    --vs-toggle-button-text-color: var(--vs-text-color-high-contrast-button);
-    --vs-toggle-button-background-color: var(--vs-background-color-high-contrast-muted);
-    --vs-toggle-button-border-color: var(--vs-border-color-high-contrast-muted);
-  }
-
-  .vsc-toggle-button:is(:disabled, [disabled], [data-disabled="true"]):is([data-selected="true"], [aria-selected="true"])[data-tone="static-white"][data-visual="bold"] {
-    --vs-toggle-button-text-color: var(--vs-text-color-high-contrast-button);
-    --vs-toggle-button-background-color: var(--vs-background-color-high-contrast-muted);
-    --vs-toggle-button-border-color: var(--vs-border-color-high-contrast-muted);
-  }
-
-  .vsc-toggle-button:is(:disabled, [disabled], [data-disabled="true"]):is([data-selected="true"], [aria-selected="true"])[data-tone="static-white"][data-visual="soft"] {
-    --vs-toggle-button-text-color: var(--vs-text-color-high-contrast-button);
-    --vs-toggle-button-background-color: var(--vs-background-color-high-contrast-muted);
-    --vs-toggle-button-border-color: var(--vs-border-color-high-contrast-muted);
-  }
-
-  .vsc-toggle-button:is(:disabled, [disabled], [data-disabled="true"]):is([data-selected="true"], [aria-selected="true"])[data-tone="static-white"][data-visual="plain"] {
-    --vs-toggle-button-text-color: var(--vs-text-color-high-contrast-button);
-    --vs-toggle-button-background-color: var(--vs-background-color-high-contrast-muted);
-    --vs-toggle-button-border-color: var(--vs-border-color-high-contrast-muted);
-  }
-
-  .vsc-toggle-button:is(:hover, [data-hovered="true"]):is([data-selected="true"], [aria-selected="true"]):not(:disabled, [disabled], [data-disabled="true"])[data-tone="accent"][data-visual="bold"] {
+  .vsc-toggle-button:is(:hover, [data-hovered]):is([data-selected], [aria-selected]):not(:disabled, [data-disabled], [aria-disabled])[data-tone="accent"][data-visual="bold"] {
     --vs-toggle-button-text-color: var(--vs-text-color-high-contrast-button);
     --vs-toggle-button-background-color: var(--vs-background-color-high-contrast-highlight);
   }
 
-  .vsc-toggle-button:is(:hover, [data-hovered="true"]):is([data-selected="true"], [aria-selected="true"]):not(:disabled, [disabled], [data-disabled="true"])[data-tone="accent"][data-visual="soft"] {
+  .vsc-toggle-button:is(:hover, [data-hovered]):is([data-selected], [aria-selected]):not(:disabled, [data-disabled], [aria-disabled])[data-tone="accent"][data-visual="soft"] {
     --vs-toggle-button-text-color: var(--vs-text-color-high-contrast-button);
     --vs-toggle-button-background-color: var(--vs-background-color-high-contrast-highlight);
   }
 
-  .vsc-toggle-button:is(:hover, [data-hovered="true"]):is([data-selected="true"], [aria-selected="true"]):not(:disabled, [disabled], [data-disabled="true"])[data-tone="accent"][data-visual="plain"] {
+  .vsc-toggle-button:is(:hover, [data-hovered]):is([data-selected], [aria-selected]):not(:disabled, [data-disabled], [aria-disabled])[data-tone="accent"][data-visual="plain"] {
     --vs-toggle-button-text-color: var(--vs-text-color-high-contrast-button);
     --vs-toggle-button-background-color: var(--vs-background-color-high-contrast-highlight);
   }
 
-  .vsc-toggle-button:is(:hover, [data-hovered="true"]):is([data-selected="true"], [aria-selected="true"]):not(:disabled, [disabled], [data-disabled="true"])[data-tone="neutral"][data-visual="bold"] {
+  .vsc-toggle-button:is(:hover, [data-hovered]):is([data-selected], [aria-selected]):not(:disabled, [data-disabled], [aria-disabled])[data-tone="neutral"][data-visual="bold"] {
     --vs-toggle-button-text-color: var(--vs-text-color-high-contrast-button);
     --vs-toggle-button-background-color: var(--vs-background-color-high-contrast-highlight);
   }
 
-  .vsc-toggle-button:is(:hover, [data-hovered="true"]):is([data-selected="true"], [aria-selected="true"]):not(:disabled, [disabled], [data-disabled="true"])[data-tone="neutral"][data-visual="soft"] {
+  .vsc-toggle-button:is(:hover, [data-hovered]):is([data-selected], [aria-selected]):not(:disabled, [data-disabled], [aria-disabled])[data-tone="neutral"][data-visual="soft"] {
     --vs-toggle-button-text-color: var(--vs-text-color-high-contrast-button);
     --vs-toggle-button-background-color: var(--vs-background-color-high-contrast-highlight);
   }
 
-  .vsc-toggle-button:is(:hover, [data-hovered="true"]):is([data-selected="true"], [aria-selected="true"]):not(:disabled, [disabled], [data-disabled="true"])[data-tone="neutral"][data-visual="plain"] {
+  .vsc-toggle-button:is(:hover, [data-hovered]):is([data-selected], [aria-selected]):not(:disabled, [data-disabled], [aria-disabled])[data-tone="neutral"][data-visual="plain"] {
     --vs-toggle-button-text-color: var(--vs-text-color-high-contrast-button);
     --vs-toggle-button-background-color: var(--vs-background-color-high-contrast-highlight);
   }
 
-  .vsc-toggle-button:is(:hover, [data-hovered="true"]):is([data-selected="true"], [aria-selected="true"]):not(:disabled, [disabled], [data-disabled="true"])[data-tone="static-black"][data-visual="bold"] {
+  .vsc-toggle-button:is(:active, [data-pressed]):is([data-selected], [aria-selected]):not(:disabled, [data-disabled], [aria-disabled])[data-tone="accent"][data-visual="bold"] {
     --vs-toggle-button-text-color: var(--vs-text-color-high-contrast-button);
     --vs-toggle-button-background-color: var(--vs-background-color-high-contrast-highlight);
   }
 
-  .vsc-toggle-button:is(:hover, [data-hovered="true"]):is([data-selected="true"], [aria-selected="true"]):not(:disabled, [disabled], [data-disabled="true"])[data-tone="static-black"][data-visual="soft"] {
+  .vsc-toggle-button:is(:active, [data-pressed]):is([data-selected], [aria-selected]):not(:disabled, [data-disabled], [aria-disabled])[data-tone="accent"][data-visual="soft"] {
     --vs-toggle-button-text-color: var(--vs-text-color-high-contrast-button);
     --vs-toggle-button-background-color: var(--vs-background-color-high-contrast-highlight);
   }
 
-  .vsc-toggle-button:is(:hover, [data-hovered="true"]):is([data-selected="true"], [aria-selected="true"]):not(:disabled, [disabled], [data-disabled="true"])[data-tone="static-black"][data-visual="plain"] {
+  .vsc-toggle-button:is(:active, [data-pressed]):is([data-selected], [aria-selected]):not(:disabled, [data-disabled], [aria-disabled])[data-tone="accent"][data-visual="plain"] {
     --vs-toggle-button-text-color: var(--vs-text-color-high-contrast-button);
     --vs-toggle-button-background-color: var(--vs-background-color-high-contrast-highlight);
   }
 
-  .vsc-toggle-button:is(:hover, [data-hovered="true"]):is([data-selected="true"], [aria-selected="true"]):not(:disabled, [disabled], [data-disabled="true"])[data-tone="static-white"][data-visual="bold"] {
+  .vsc-toggle-button:is(:active, [data-pressed]):is([data-selected], [aria-selected]):not(:disabled, [data-disabled], [aria-disabled])[data-tone="neutral"][data-visual="bold"] {
     --vs-toggle-button-text-color: var(--vs-text-color-high-contrast-button);
     --vs-toggle-button-background-color: var(--vs-background-color-high-contrast-highlight);
   }
 
-  .vsc-toggle-button:is(:hover, [data-hovered="true"]):is([data-selected="true"], [aria-selected="true"]):not(:disabled, [disabled], [data-disabled="true"])[data-tone="static-white"][data-visual="soft"] {
+  .vsc-toggle-button:is(:active, [data-pressed]):is([data-selected], [aria-selected]):not(:disabled, [data-disabled], [aria-disabled])[data-tone="neutral"][data-visual="soft"] {
     --vs-toggle-button-text-color: var(--vs-text-color-high-contrast-button);
     --vs-toggle-button-background-color: var(--vs-background-color-high-contrast-highlight);
   }
 
-  .vsc-toggle-button:is(:hover, [data-hovered="true"]):is([data-selected="true"], [aria-selected="true"]):not(:disabled, [disabled], [data-disabled="true"])[data-tone="static-white"][data-visual="plain"] {
-    --vs-toggle-button-text-color: var(--vs-text-color-high-contrast-button);
-    --vs-toggle-button-background-color: var(--vs-background-color-high-contrast-highlight);
-  }
-
-  .vsc-toggle-button:is(:active, [data-pressed="true"]):is([data-selected="true"], [aria-selected="true"]):not(:disabled, [disabled], [data-disabled="true"])[data-tone="accent"][data-visual="bold"] {
-    --vs-toggle-button-text-color: var(--vs-text-color-high-contrast-button);
-    --vs-toggle-button-background-color: var(--vs-background-color-high-contrast-highlight);
-  }
-
-  .vsc-toggle-button:is(:active, [data-pressed="true"]):is([data-selected="true"], [aria-selected="true"]):not(:disabled, [disabled], [data-disabled="true"])[data-tone="accent"][data-visual="soft"] {
-    --vs-toggle-button-text-color: var(--vs-text-color-high-contrast-button);
-    --vs-toggle-button-background-color: var(--vs-background-color-high-contrast-highlight);
-  }
-
-  .vsc-toggle-button:is(:active, [data-pressed="true"]):is([data-selected="true"], [aria-selected="true"]):not(:disabled, [disabled], [data-disabled="true"])[data-tone="accent"][data-visual="plain"] {
-    --vs-toggle-button-text-color: var(--vs-text-color-high-contrast-button);
-    --vs-toggle-button-background-color: var(--vs-background-color-high-contrast-highlight);
-  }
-
-  .vsc-toggle-button:is(:active, [data-pressed="true"]):is([data-selected="true"], [aria-selected="true"]):not(:disabled, [disabled], [data-disabled="true"])[data-tone="neutral"][data-visual="bold"] {
-    --vs-toggle-button-text-color: var(--vs-text-color-high-contrast-button);
-    --vs-toggle-button-background-color: var(--vs-background-color-high-contrast-highlight);
-  }
-
-  .vsc-toggle-button:is(:active, [data-pressed="true"]):is([data-selected="true"], [aria-selected="true"]):not(:disabled, [disabled], [data-disabled="true"])[data-tone="neutral"][data-visual="soft"] {
-    --vs-toggle-button-text-color: var(--vs-text-color-high-contrast-button);
-    --vs-toggle-button-background-color: var(--vs-background-color-high-contrast-highlight);
-  }
-
-  .vsc-toggle-button:is(:active, [data-pressed="true"]):is([data-selected="true"], [aria-selected="true"]):not(:disabled, [disabled], [data-disabled="true"])[data-tone="neutral"][data-visual="plain"] {
-    --vs-toggle-button-text-color: var(--vs-text-color-high-contrast-button);
-    --vs-toggle-button-background-color: var(--vs-background-color-high-contrast-highlight);
-  }
-
-  .vsc-toggle-button:is(:active, [data-pressed="true"]):is([data-selected="true"], [aria-selected="true"]):not(:disabled, [disabled], [data-disabled="true"])[data-tone="static-black"][data-visual="bold"] {
-    --vs-toggle-button-text-color: var(--vs-text-color-high-contrast-button);
-    --vs-toggle-button-background-color: var(--vs-background-color-high-contrast-highlight);
-  }
-
-  .vsc-toggle-button:is(:active, [data-pressed="true"]):is([data-selected="true"], [aria-selected="true"]):not(:disabled, [disabled], [data-disabled="true"])[data-tone="static-black"][data-visual="soft"] {
-    --vs-toggle-button-text-color: var(--vs-text-color-high-contrast-button);
-    --vs-toggle-button-background-color: var(--vs-background-color-high-contrast-highlight);
-  }
-
-  .vsc-toggle-button:is(:active, [data-pressed="true"]):is([data-selected="true"], [aria-selected="true"]):not(:disabled, [disabled], [data-disabled="true"])[data-tone="static-black"][data-visual="plain"] {
-    --vs-toggle-button-text-color: var(--vs-text-color-high-contrast-button);
-    --vs-toggle-button-background-color: var(--vs-background-color-high-contrast-highlight);
-  }
-
-  .vsc-toggle-button:is(:active, [data-pressed="true"]):is([data-selected="true"], [aria-selected="true"]):not(:disabled, [disabled], [data-disabled="true"])[data-tone="static-white"][data-visual="bold"] {
-    --vs-toggle-button-text-color: var(--vs-text-color-high-contrast-button);
-    --vs-toggle-button-background-color: var(--vs-background-color-high-contrast-highlight);
-  }
-
-  .vsc-toggle-button:is(:active, [data-pressed="true"]):is([data-selected="true"], [aria-selected="true"]):not(:disabled, [disabled], [data-disabled="true"])[data-tone="static-white"][data-visual="soft"] {
-    --vs-toggle-button-text-color: var(--vs-text-color-high-contrast-button);
-    --vs-toggle-button-background-color: var(--vs-background-color-high-contrast-highlight);
-  }
-
-  .vsc-toggle-button:is(:active, [data-pressed="true"]):is([data-selected="true"], [aria-selected="true"]):not(:disabled, [disabled], [data-disabled="true"])[data-tone="static-white"][data-visual="plain"] {
+  .vsc-toggle-button:is(:active, [data-pressed]):is([data-selected], [aria-selected]):not(:disabled, [data-disabled], [aria-disabled])[data-tone="neutral"][data-visual="plain"] {
     --vs-toggle-button-text-color: var(--vs-text-color-high-contrast-button);
     --vs-toggle-button-background-color: var(--vs-background-color-high-contrast-highlight);
   }

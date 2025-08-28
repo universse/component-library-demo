@@ -138,15 +138,18 @@
     );
   }
 
-  &:--vs-button-variant-is-disabled,
-  &:--vs-button-variant-is-pending {
+  &:--vs-button-variant-status-soft-disabled {
+    cursor: help;
+  }
+
+  &:--vs-button-variant-status-disabled {
     cursor: not-allowed;
   }
 
-  &:--vs-button-variant-is-pending {
+  &:--vs-button-variant-status-pending {
     & .vsc-button-content {
-      animation: vsc-fade-in 0ms linear
-        var(--vs-button-spinner-appearance-delay) reverse both;
+      opacity: 0;
+      transition: opacity 0ms linear var(--vs-button-spinner-appearance-delay);
     }
 
     & .vsc-progress-circle {
@@ -167,7 +170,7 @@
   padding-block: 0;
   padding-inline: 0;
 
-  &[data-compact='true'] {
+  &[data-compact] {
     --button-height: var(--vs-button-icon-size);
 
     background-color: transparent;

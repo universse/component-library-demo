@@ -4,6 +4,7 @@ import * as RA from 'react-aria'
 import * as RAC from 'react-aria-components'
 import * as themeTypes from 'vs:theme/types'
 
+import type { Status } from '#src/ui/core/types'
 import { mapProps, useLocalizedStringFormatter } from '#src/ui/core/utils'
 import type { IconProps } from '#src/ui/icon'
 import { ProgressCircle } from '#src/ui/progress-circle'
@@ -15,6 +16,7 @@ export interface ButtonProps
   extends RAC.ButtonProps,
     themeTypes.ButtonVariants {
   children?: React.ReactNode
+  isSoftDisabled?: boolean
   touchFriendly?: boolean
   accessibilityLabel?: string
   contentBefore?: React.ReactNode
@@ -26,14 +28,17 @@ export interface ButtonProps
 export function Button(props: ButtonProps) {
   const [
     {
+      children,
+      isDisabled,
+      isSoftDisabled = false,
+      isPending,
       touchFriendly = false,
       accessibilityLabel,
-      children,
-      className,
       contentBefore,
       iconBefore,
       iconAfter,
       contentAfter,
+      className,
       ...otherProps
     },
   ] = mapProps(
@@ -41,10 +46,40 @@ export function Button(props: ButtonProps) {
     themeTypes.buttonVariantMap
   )
 
+  let statusProps: {
+    isDisabled?: boolean
+    isPending?: boolean
+    'aria-disabled'?: boolean
+    'data-status'?: Status
+  } = {}
+
+  if (isDisabled) {
+    statusProps = {
+      isDisabled: true,
+      isPending: false,
+      'data-status': 'disabled',
+    }
+  } else if (isSoftDisabled) {
+    statusProps = {
+      isPending: false,
+      'aria-disabled': true,
+      'data-status': 'soft-disabled',
+    }
+  } else if (isPending) {
+    statusProps = {
+      isPending: true,
+      'data-status': 'pending',
+    }
+  }
+
   const stringFormatter = useLocalizedStringFormatter()
 
   return (
-    <RAC.Button className={clsx('vsc-button', className)} {...otherProps}>
+    <RAC.Button
+      className={clsx('vsc-button', className)}
+      {...otherProps}
+      {...statusProps}
+    >
       <span className='vsc-button-content'>
         {contentBefore && <div slot='content-before'>{contentBefore}</div>}
 

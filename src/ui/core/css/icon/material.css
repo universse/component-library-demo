@@ -5,7 +5,7 @@
   fill: currentcolor;
   inline-size: var(--ovr-icon-size, var(--vs-icon-size, 1em));
 
-  [dir='rtl'] &[data-rtl='true'] {
+  [dir='rtl'] &[data-rtl] {
     transform: scaleX(-1);
   }
 }
