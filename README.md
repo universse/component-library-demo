@@ -7,7 +7,7 @@ A code demo of an endlessly themable component library built on top of [react-ar
 - Customize anything:
   - Design tokens
   - Assets (fonts and icons)
-  - Multi-dimensional UI theming ([learn more]())
+  - Multi-dimensional appearance modes
   - Component variants
 - Tooling integration:
   - TailwindCSS theme
