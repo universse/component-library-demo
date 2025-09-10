@@ -7,10 +7,11 @@ export interface SpinnerProps extends themeTypes.SpinnerVariants {
   className?: string
   style?: React.CSSProperties
   isLoading?: boolean
+  isDelayed?: boolean
 }
 
 export function Spinner(props: SpinnerProps) {
-  const [{ isLoading = true, className, ...otherProps }] = mapProps(
+  const [{ isLoading = true, className, isDelayed, ...otherProps }] = mapProps(
     props,
     themeTypes.spinnerVariantMap
   )
@@ -19,6 +20,7 @@ export function Spinner(props: SpinnerProps) {
     <svg
       className={clsx('vsc-spinner', className)}
       {...otherProps}
+      data-delayed={isDelayed || undefined}
       data-loading={isLoading || undefined}
     >
       <circle className='vsc-spinner-track' />

@@ -11,7 +11,6 @@
 @import 'tailwindcss/utilities.css' layer(utilities) prefix(vs);
 @import './tokens/tailwind-v4/theme.css' layer(theme)
   prefix(vs);
-@import './tokens/tailwind-v4/variants.css';
 
 /* UI */
 @import '#src/ui/core/css/keyframes.css';
@@ -19,30 +18,21 @@
 @import '#src/ui/core/css/utilities.css' layer(utilities);
 
 /* Icon */
-@import '#src/ui/core/css/icon/tabler.css' layer(components);
-
-/* @import 'tw-animate-css'; */
+@import '#src/ui/core/css/icon/lucide.css' layer(components);
 
 /* Global */
 @layer global {
   * {
-    border-color: var(--vs-color-border);
+    border-color: var(--vs-border-color-neutral);
   }
 
   :--vs-container {
-    background-color: var(--vs-color-background);
-    color: var(--vs-color-foreground);
+    background-color: var(--vs-background-color-neutral-surface);
+    color: var(--vs-text-color-neutral-primary);
+    color-scheme: light;
     font-family: var(--vs-font-family-sans);
     font-size: var(--vs-typography-base-font-size);
     line-height: var(--vs-typography-base-line-height);
-  }
-
-  :--vs-container:--vs-condition-mode-light {
-    color-scheme: light;
-  }
-
-  :--vs-container:--vs-condition-mode-dark {
-    color-scheme: dark;
   }
 
   :focus-visible:not([data-focused]) {

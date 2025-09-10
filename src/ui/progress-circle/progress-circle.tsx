@@ -9,11 +9,14 @@ export interface ProgressCircleProps
   extends Omit<RAC.ProgressBarProps, 'children'>,
     themeTypes.SpinnerVariants {
   accessibilityLabel: string
+  isDelayed?: boolean
 }
 
 export function ProgressCircle(props: ProgressCircleProps) {
-  const [{ accessibilityLabel, className, ...otherProps }, variantProps] =
-    mapProps(props, themeTypes.spinnerVariantMap)
+  const [
+    { accessibilityLabel, className, isDelayed, ...otherProps },
+    variantProps,
+  ] = mapProps(props, themeTypes.spinnerVariantMap)
 
   return (
     <RAC.ProgressBar
@@ -27,7 +30,8 @@ export function ProgressCircle(props: ProgressCircleProps) {
           </RAC.Label>
 
           <Spinner
-            isLoading={props.isIndeterminate!}
+            isDelayed={isDelayed!}
+            isLoading={otherProps.isIndeterminate!}
             style={{ ['--data-percentage' as string]: percentage }}
             {...variantProps}
           />

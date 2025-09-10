@@ -8,27 +8,26 @@ import materialMainCssUrl from '#src/themes/material/main.css?url'
 import { palettezConfig as materialPalettezConfig } from '#src/themes/material/palettez'
 import materialTypefacesCssUrl from '#src/themes/material/typefaces.css?url'
 import * as materialTypes from '#src/themes/material/types'
-import resonanceForcedColorsCssUrl from '#src/themes/resonance/forced-colors.css?url'
-import resonanceMainCssUrl from '#src/themes/resonance/main.css?url'
-import resonanceP3ColorsCssUrl from '#src/themes/resonance/p3-colors.css?url'
-import { palettezConfig as resonancePalettezConfig } from '#src/themes/resonance/palettez'
-import resonanceTypefacesCssUrl from '#src/themes/resonance/typefaces.css?url'
-import * as resonanceTypes from '#src/themes/resonance/types'
 import shadcnMainCssUrl from '#src/themes/shadcn/main.css?url'
 import { palettezConfig as shadcnPalettezConfig } from '#src/themes/shadcn/palettez'
 import shadcnTypefacesCssUrl from '#src/themes/shadcn/typefaces.css?url'
 import * as shadcnTypes from '#src/themes/shadcn/types'
+import wireframeMainCssUrl from '#src/themes/wireframe/main.css?url'
+import wireframeP3ColorsCssUrl from '#src/themes/wireframe/p3-colors.css?url'
+import { palettezConfig as wireframePalettezConfig } from '#src/themes/wireframe/palettez'
+import wireframeTypefacesCssUrl from '#src/themes/wireframe/typefaces.css?url'
+import * as wireframeTypes from '#src/themes/wireframe/types'
 
 declare module 'palettez' {
   interface ThemeStoreRegistry {
-    resonance: ThemeStore<typeof resonancePalettezConfig>
     shadcn: ThemeStore<typeof shadcnPalettezConfig>
     github: ThemeStore<typeof githubPalettezConfig>
     material: ThemeStore<typeof materialPalettezConfig>
+    wireframe: ThemeStore<typeof wireframePalettezConfig>
   }
 }
 
-export type DemoTheme = 'github' | 'material' | 'resonance' | 'shadcn'
+export type DemoTheme = 'github' | 'material' | 'shadcn' | 'wireframe'
 
 async function defaultThemeScript({
   key,
@@ -171,35 +170,6 @@ export const THEMES: Record<
     themeScript: defaultThemeScript,
   },
 
-  resonance: {
-    title: 'Resonance',
-
-    resourceLinks: [
-      {
-        href: resonanceTypes.spriteSheetUrl,
-        rel: 'preload',
-        as: 'image',
-        type: 'image/svg+xml',
-      },
-      { href: resonanceTypefacesCssUrl, rel: 'stylesheet' },
-      { href: resonanceMainCssUrl, rel: 'stylesheet' },
-      {
-        href: resonanceForcedColorsCssUrl,
-        rel: 'stylesheet',
-        media: '(forced-colors: active)',
-      },
-      {
-        href: resonanceP3ColorsCssUrl,
-        rel: 'stylesheet',
-        media: '(color-gamut: p3)',
-      },
-    ],
-
-    palettezConfig: resonancePalettezConfig,
-
-    themeScript: defaultThemeScript,
-  },
-
   shadcn: {
     title: 'shadcn/ui',
 
@@ -215,6 +185,30 @@ export const THEMES: Record<
     ],
 
     palettezConfig: shadcnPalettezConfig,
+
+    themeScript: defaultThemeScript,
+  },
+
+  wireframe: {
+    title: 'Wireframe',
+
+    resourceLinks: [
+      {
+        href: wireframeTypes.spriteSheetUrl,
+        rel: 'preload',
+        as: 'image',
+        type: 'image/svg+xml',
+      },
+      { href: wireframeTypefacesCssUrl, rel: 'stylesheet' },
+      { href: wireframeMainCssUrl, rel: 'stylesheet' },
+      {
+        href: wireframeP3ColorsCssUrl,
+        rel: 'stylesheet',
+        media: '(color-gamut: p3)',
+      },
+    ],
+
+    palettezConfig: wireframePalettezConfig,
 
     themeScript: defaultThemeScript,
   },

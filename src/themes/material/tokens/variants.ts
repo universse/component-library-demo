@@ -433,11 +433,11 @@ export const separatorVariantMap = {
 } as const satisfies { [key in keyof SeparatorVariants]: [string, SeparatorVariants[key]] | [string] }
 
 export interface SpinnerVariants {
-  isDelayed?: boolean | undefined
+  
 }
 
 export const spinnerVariantMap = {
-  isDelayed: ['delayed']
+  
 } as const satisfies { [key in keyof SpinnerVariants]: [string, SpinnerVariants[key]] | [string] }
 
 export interface SplitButtonVariants {

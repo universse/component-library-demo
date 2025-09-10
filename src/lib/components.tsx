@@ -12,16 +12,15 @@ export function Demo({ theme }: { theme: DemoTheme }) {
     switch (theme) {
       case 'github': {
         return (
-          <div className='vs:flex vs:flex-col vs:gap-[1.5rem] vs:p-[2rem]'>
+          <>
             <div>
               <h1 className='vs:typography-display'>{title}</h1>
-              {/* <p className='vs:mt-[0.25rem]'>
-                To switch theme, please refer to the README.
-              </p> */}
             </div>
+
             <div>
               <AppearanceControls theme={theme} />
             </div>
+
             <div className='vs:flex vs:gap-[1rem] vs:flex-wrap vs:border-[1px] vs:p-[2rem] vs:rounded-[8px]'>
               <Button
                 iconAfter={<Octicon name='arrow-right-16' rtl />}
@@ -59,19 +58,17 @@ export function Demo({ theme }: { theme: DemoTheme }) {
                 Click me
               </Button>
             </div>
-          </div>
+          </>
         )
       }
 
       case 'material': {
         return (
-          <div className='vs:flex vs:flex-col vs:gap-[1.5rem] vs:p-[2rem]'>
+          <>
             <div>
               <h1 className='vs:typography-display-medium'>{title}</h1>
-              {/* <p className='vs:mt-[0.25rem]'>
-                To switch theme, please refer to the README.
-              </p> */}
             </div>
+
             <div>
               <AppearanceControls theme={theme} />
             </div>
@@ -117,121 +114,21 @@ export function Demo({ theme }: { theme: DemoTheme }) {
                 Click me
               </Button>
             </div>
-          </div>
-        )
-      }
-
-      case 'resonance': {
-        return (
-          <div className='vs:flex vs:flex-col vs:gap-[1.5rem] vs:p-[2rem]'>
-            <div>
-              <h1 className='vs:typography-heading-lg'>{title}</h1>
-              {/* <p className='vs:mt-[0.25rem]'>
-                To switch theme, please refer to the README.
-              </p> */}
-            </div>
-            <div>
-              <AppearanceControls theme={theme} />
-            </div>
-            <div className='vs:flex vs:gap-[1rem] vs:flex-wrap vs:border-[1px] vs:p-[2rem] vs:rounded-[8px]'>
-              <Button
-                iconAfter={<Icon name='arrow-right' rtl />}
-                radius='sm' // 'sm' | 'full'
-                size='small' // '2xs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl'
-                tone='accent'
-                visual='bold'
-              >
-                Click me
-              </Button>
-              <Button
-                iconAfter={<Icon name='arrow-right' rtl />}
-                radius='sm' // 'sm' | 'full'
-                size='small' // '2xs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl'
-                tone='accent'
-                visual='outline'
-              >
-                Click me
-              </Button>
-              <Button
-                iconAfter={<Icon name='arrow-right' rtl />}
-                radius='sm' // 'sm' | 'full'
-                size='small' // '2xs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl'
-                tone='accent'
-                visual='plain'
-              >
-                Click me
-              </Button>
-              <Button
-                iconAfter={<Icon name='arrow-right' rtl />}
-                radius='sm' // 'sm' | 'full'
-                size='small' // '2xs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl'
-                tone='critical'
-                visual='bold'
-              >
-                Click me
-              </Button>
-              <Button
-                iconAfter={<Icon name='arrow-right' rtl />}
-                radius='sm' // 'sm' | 'full'
-                size='small' // '2xs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl'
-                tone='critical'
-                visual='outline'
-              >
-                Click me
-              </Button>
-              <Button
-                iconAfter={<Icon name='arrow-right' rtl />}
-                radius='sm' // 'sm' | 'full'
-                size='small' // '2xs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl'
-                tone='critical'
-                visual='plain'
-              >
-                Click me
-              </Button>
-              <Button
-                iconAfter={<Icon name='arrow-right' rtl />}
-                radius='sm' // 'sm' | 'full'
-                size='small' // '2xs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl'
-                tone='neutral'
-                visual='bold'
-              >
-                Click me
-              </Button>
-              <Button
-                iconAfter={<Icon name='arrow-right' rtl />}
-                radius='sm' // 'sm' | 'full'
-                size='small' // '2xs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl'
-                tone='neutral'
-                visual='outline'
-              >
-                Click me
-              </Button>
-              <Button
-                iconAfter={<Icon name='arrow-right' rtl />}
-                radius='sm' // 'sm' | 'full'
-                size='small' // '2xs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl'
-                tone='neutral'
-                visual='plain'
-              >
-                Click me
-              </Button>
-            </div>
-          </div>
+          </>
         )
       }
 
       case 'shadcn': {
         return (
-          <div className='vs:flex vs:flex-col vs:gap-[1.5rem] vs:p-[2rem]'>
+          <>
             <div>
               <h1 className='vs:typography-5xl'>{title}</h1>
-              {/* <p className='vs:mt-[0.25rem]'>
-                To switch theme, please refer to the README.
-              </p> */}
             </div>
+
             <div>
               <AppearanceControls theme={theme} />
             </div>
+
             <div className='vs:flex vs:gap-[1rem] vs:flex-wrap vs:border-[1px] vs:p-[2rem] vs:rounded-[8px]'>
               <Button
                 iconAfter={<Icon name='arrow-right' rtl />}
@@ -269,13 +166,55 @@ export function Demo({ theme }: { theme: DemoTheme }) {
                 Click me
               </Button>
             </div>
-          </div>
+          </>
+        )
+      }
+
+      case 'wireframe': {
+        return (
+          <>
+            <div>
+              <h1 className='vs:typography-heading-lg'>{title}</h1>
+            </div>
+
+            <div>
+              <AppearanceControls theme={theme} />
+            </div>
+
+            <div className='vs:flex vs:gap-[1rem] vs:flex-wrap vs:border-[1px] vs:p-[2rem] vs:rounded-[8px]'>
+              <Button
+                iconAfter={<Icon name='arrow-right' rtl />}
+                size='medium' // 'medium' | 'large'
+                variant='primary'
+              >
+                Click me
+              </Button>
+              <Button
+                iconAfter={<Icon name='arrow-right' rtl />}
+                size='medium' // 'medium' | 'large'
+                variant='secondary'
+              >
+                Click me
+              </Button>
+              <Button
+                iconAfter={<Icon name='arrow-right' rtl />}
+                size='medium' // 'medium' | 'large'
+                variant='danger'
+              >
+                Click me
+              </Button>
+            </div>
+          </>
         )
       }
     }
   }
 
-  return renderDemo()
+  return (
+    <div className='vs:flex vs:flex-col vs:gap-[1.5rem] vs:p-[2rem]'>
+      {renderDemo()}
+    </div>
+  )
 }
 
 function AppearanceControls({ theme }: { theme: DemoTheme }) {

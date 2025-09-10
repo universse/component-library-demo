@@ -13,14 +13,14 @@ export function mapProps<
 
   Object.entries(variantMap).forEach(([key, [dataAttribute, defaultValue]]) => {
     const value = props[key] || defaultValue || undefined
-    newProps[`data-${dataAttribute}`] = value
+    newProps[`data-v-${dataAttribute}`] = value
     variantProps[key] = value
-    delete newProps[key]
+    newProps[key] = undefined
   })
 
   return [newProps, variantProps] as [
     Omit<Props, VariantKey> & {
-      [K in VariantKey as `data-${VariantMap[K][0]}`]: Props[K]
+      [K in VariantKey as `data-v-${VariantMap[K][0]}`]: Props[K]
     },
     { [K in VariantKey]: Props[K] },
   ]

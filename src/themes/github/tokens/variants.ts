@@ -433,11 +433,10 @@ export const separatorVariantMap = {
 
 export interface SpinnerVariants {
   size?: 'small' | 'medium' | 'large' | undefined
-  isDelayed?: boolean | undefined
 }
 
 export const spinnerVariantMap = {
-  size: ['size', 'medium'], isDelayed: ['delayed']
+  size: ['size', 'medium']
 } as const satisfies { [key in keyof SpinnerVariants]: [string, SpinnerVariants[key]] | [string] }
 
 export interface SplitButtonVariants {

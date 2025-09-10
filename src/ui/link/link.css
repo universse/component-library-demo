@@ -7,22 +7,25 @@
     var(--vs-link-outline-color);
   outline-offset: var(--vs-link-outline-offset);
   position: relative;
-  text-decoration: var(--vs-link-decoration-line-thickness, auto)
-    var(--vs-link-decoration-line-style, solid)
-    var(--vs-link-decoration-line-color, currentcolor);
+  text-decoration-color: var(--vs-link-decoration-line-color, currentcolor);
+  text-decoration-thickness: var(--vs-link-decoration-line-thickness);
   text-underline-offset: var(--vs-link-underline-offset, auto);
 
-  &[data-visual='plain'] {
+  &[data-underline='none'] {
     text-decoration-line: none;
   }
 
-  &[data-visual='underline'] {
+  &[data-underline='solid'] {
     text-decoration-line: underline;
     text-decoration-style: solid;
   }
 
-  &[data-visual='dotted'] {
+  &[data-underline='dotted'] {
     text-decoration-line: underline;
     text-decoration-style: dotted;
+  }
+
+  &[data-unstyled] {
+    all: revert-layer;
   }
 }

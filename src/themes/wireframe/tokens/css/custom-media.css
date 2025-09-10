@@ -1,0 +1,9 @@
+@custom-media --vs-condition-touch (any-pointer: coarse);
+@custom-media --vs-condition-forced-colors (forced-colors: active);
+@custom-media --vs-condition-color-gamut-p3 (color-gamut: p3);
+@custom-media --vs-condition-color-gamut-rec2020 (color-gamut: rec2020);
+@custom-media --vs-condition-vw-sm (width >= 40rem);
+@custom-media --vs-condition-vw-md (width >= 48rem);
+@custom-media --vs-condition-vw-lg (width >= 64rem);
+@custom-media --vs-condition-vw-xl (width >= 80rem);
+@custom-media --vs-condition-vw-2xl (width >= 96rem);

@@ -4,6 +4,7 @@
   display: block;
   fill: currentcolor;
   inline-size: var(--ovr-icon-size, var(--vs-icon-size, 1em));
+  stroke: none;
 
   [dir='rtl'] &[data-rtl] {
     transform: scaleX(-1);

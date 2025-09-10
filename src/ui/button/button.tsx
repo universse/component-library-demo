@@ -17,7 +17,8 @@ export interface ButtonProps
     themeTypes.ButtonVariants {
   children?: React.ReactNode
   isSoftDisabled?: boolean
-  touchFriendly?: boolean
+  labelAlign?: 'start' | 'center' | 'end' | 'true-center'
+  contentWidth?: 'fit' | 'full'
   accessibilityLabel?: string
   contentBefore?: React.ReactNode
   iconBefore?: React.ReactElement<IconProps>
@@ -32,7 +33,8 @@ export function Button(props: ButtonProps) {
       isDisabled,
       isSoftDisabled = false,
       isPending,
-      touchFriendly = false,
+      labelAlign = 'center',
+      contentWidth = 'fit',
       accessibilityLabel,
       contentBefore,
       iconBefore,
@@ -79,6 +81,8 @@ export function Button(props: ButtonProps) {
       className={clsx('vsc-button', className)}
       {...otherProps}
       {...statusProps}
+      data-content-width={contentWidth}
+      data-label-align={labelAlign}
     >
       <span className='vsc-button-content'>
         {contentBefore && <div slot='content-before'>{contentBefore}</div>}
@@ -179,7 +183,8 @@ export interface ButtonLinkProps
     themeTypes.ButtonVariants {
   children?: React.ReactNode
   accessibilityLabel?: string
-  touchFriendly?: boolean
+  labelAlign?: 'start' | 'center' | 'end' | 'true-center'
+  contentWidth?: 'fit' | 'full'
   contentBefore?: React.ReactNode
   iconBefore?: React.ReactElement<IconProps>
   iconAfter?: React.ReactElement<IconProps>
@@ -189,9 +194,10 @@ export interface ButtonLinkProps
 export function ButtonLink(props: ButtonLinkProps) {
   const [
     {
-      touchFriendly = false,
-      accessibilityLabel,
       children,
+      accessibilityLabel,
+      labelAlign = 'center',
+      contentWidth = 'fit',
       className,
       contentBefore,
       iconBefore,
@@ -205,7 +211,12 @@ export function ButtonLink(props: ButtonLinkProps) {
   )
 
   return (
-    <RAC.Link className={clsx('vsc-button', className)} {...otherProps}>
+    <RAC.Link
+      className={clsx('vsc-button', className)}
+      {...otherProps}
+      data-content-width={contentWidth}
+      data-label-align={labelAlign}
+    >
       <span className='vsc-button-content'>
         {contentBefore && <div slot='content-before'>{contentBefore}</div>}
 
