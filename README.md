@@ -51,7 +51,7 @@ Then, update `Button` variant in `src/lib/components.tsx`.
 ├── src/
 │   ├── themes/
 │   │   ├── github/
-│   │   │   ├── tokens/        # design tokens in CSS
+│   │   │   ├── tokens/        # design tokens artifacts
 │   │   │   ├── main.css       # CSS entry point
 │   │   │   ├── palettez.ts    # appearance mode config
 │   │   │   ├── typefaces.css  # custom fonts
